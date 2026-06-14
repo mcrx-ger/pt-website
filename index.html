@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <title>Max M. - Personal Trainer Stuttgart</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="bizeps.png" type="image/x-icon">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <section id="topsection">
+                <div class="iconname">
+                    <img src="bizeps.png" id="bizeps">
+                    <p>Max Müller</p>
+                </div>
+                <nav>
+                    <a href="#angebote">Angebote</a>
+                    <a href="#motivationszitat">Motivation</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="#chat">Chatbot</a>
+                    <a href="#kontakt">Kontakt</a>
+                    <a href="#kalorienrechner">Kalorienrechner</a>
+                </nav>
+            </section>
+            <h1>Dein Personal Trainer in Stuttgart</h1>
+            <p>Ich helfe dir, deine Fitnessziele wirklich zu erreichen.</p>
+        </header>
+        <main>
+            <section id="ueber-mich">
+                <h2>Über mich</h2>
+                <img src="trainer.jpg" alt="Max Müller, Personal Trainer">
+                <p>Ich bin Max, zertifizierter Personal Trainer mit 5 Jahren Erfahrung.</p>
+                <input id="mehrInfos" type="button" value="Mehr Infos">
+                <div class="hidden" id="info1">
+                    <p>Ich habe meine <strong>Leidenschaft</strong> zum Beruf gemacht. Als Trainer war ich bereits tätig bei</p>
+                    <ol>
+                        <li>Vfb Stuttgart</li>
+                        <li>Hertha BSC</li>
+                        <li>FC Bayern München U21</li>
+                    </ol>
+                </div>
+            </section>
+
+            <section id="angebote">
+                <h2>Meine Angebote</h2>
+
+                <div id="karten">
+                    <div class="karte">
+                        <h3>Einzeltraining</h3>
+                        <p>1:1 Training, komplett auf dich zugeschnitten.</p>
+                    </div>
+
+                    <div class="karte">
+                        <h3>Online-Coaching</h3>
+                        <p>Trainingsplan + wöchentlicher Check-in per Video.</p>
+                    </div>
+
+                    <div class="karte">
+                        <h3>Ernährungsberatung</h3>
+                        <p>Individueller Ernährungsplan ohne Verbote.</p>
+                    </div>
+                </div>
+                
+            </section>
+
+            <section id="motivationszitat">
+                <h2>Motivationszitat</h2>
+
+                <div id="motivationpreview">
+                    <p>Lass ein Zitat auswählen. Ganz für dich allein. Neugierig?</p>
+                    <input type="button" id="quotebutton" value="Zeigen">
+                </div>
+                <p id="quoteline" class="hidden"></p>
+                
+            </section>
+
+            <section id="faq">
+                <h2>FAQ</h2>
+                <input id="frage1" type="button" value="Wie viel kostet 1 Monat Coaching?">
+                <p class="hidden">In den meisten Fällen zwischen 200 und 500 Euro.</p>
+                <input id="frage2" type="button" value="Welche Sportarten sind mit deinem Coaching kompatibel?">
+                <p class="hidden">Gym und multifunktionales Training. Fußball, Schwimmen, Radfahren, Laufen und Volleyball.</p>
+                <input id="frage3" type="button" value="Betreust du nur Profis?">
+                <p class="hidden">Mein Coaching richtet sich an alle Sportler und diejenigen, die es werden möchten.</p>
+            </section>
+
+            <section id="chat">
+                <h2>Chatbot</h2>
+                <div id="chatwidget">
+                    <div id="chatverlauf">
+                        <div class="bot">Hi, ich bin Maxi, dein digitaler Assistent. Du kannst mich alles rund um das Personal Coaching von Max fragen.</div>
+                    </div>
+                    <div id="messagefield">
+                        <input type="text" id="chatcontent" placeholder="Gib hier deine Nachricht ein">
+                        <input id="chatbutton" type="button" value="Senden">
+                    </div>
+                </div>
+            </section>
+
+            <section id="kontakt">
+                <h2>Kontakt</h2>
+                <p>Schreib mir: <a href="mailto:max@beispiel.de">max@beispiel.de</a></p>
+                <div id="kontaktformularabschnitt">
+                    <p>Oder nutze das <input id="kontaktbutton" type="button" value="Kontaktformular"></p>
+                    <form action="" method="get" class="hidden" id="contactform">
+                        <div>
+                            <label for="name">Dein Name: </label>
+                            <input type="text" name="name" id="name" required>
+                        </div>
+                        <div>
+                            <label for="email">Deine E-mail: </label>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+                        <div>
+                            <label for="message">Deine Nachricht / Wünsche: </label>
+                            <input type="text" name="message" id="message" required>
+                        </div>
+                        <div>
+                            <input type="submit" value="Abschicken">
+                        </div>
+                    </form>
+                </div>
+                
+                <p class="hidden" id="thanks"></p>
+            </section>
+
+            <section id="kalorienrechner">
+                <h2>Kalorienrechner</h2>
+                <p>Hier kannst du berechnen, wie viele Kalorien du beim lockeren Joggen verbrennst.</p>
+                <input type="button" id="kalorienbutton" value="Kalorienrechner starten">
+                <div class="hidden" id="rechnerfeld">
+                    <input type="number" id="laufzeit" placeholder="Dauer des Laufs (in min)">
+                    <input type="number" id="kg" placeholder="Körpergewicht (in kg)">
+                    <p class="hidden" id="kalorienreturn">Du hast ... Kalorien verbrannt.</p>
+                    <input type="button" id="calcbutton" value="Berechnen">
+                </div>
+                
+            </section>
+
+        </main>
+        <footer>
+            <p>© 2025 Max Müller · Personal Trainer Stuttgart</p>
+        </footer>
+
+    <script src="config.js"></script>
+    <script>
+        let calories = 0
+
+        function ausgabe(){
+            const button1 = document.getElementById("mehrInfos")
+            if (button1.value == "Weniger Infos"){button1.value = "Mehr Infos"}
+            else {button1.value = "Weniger Infos"}
+            document.getElementById("info1").classList.toggle("hidden")
+        }
+        function showHideFaq(event) {
+            event.target.nextElementSibling.classList.toggle("hidden")
+        }
+        function openFormula(){
+            document.getElementById("contactform").classList.toggle("hidden")
+        }
+        async function submitFormula(event){
+            event.preventDefault();
+            try {
+                const formData = new FormData(document.getElementById('contactform'));
+                const r = await fetch(`https://formspree.io/f/${CONFIG.formspreeId}`, {
+                    method: "POST",
+                    body: formData,
+                    headers: { Accept: "application/json" }
+                });
+                if (!r.ok) throw new Error("Status " + r.status);
+                document.getElementById("kontaktformularabschnitt").classList.add("hidden")
+                document.getElementById("thanks").textContent = "Danke! Ich melde mich so bald wie möglich."
+                document.getElementById("thanks").classList.remove("hidden")
+            } catch (error) {
+                document.getElementById("thanks").textContent = "Das hat nicht geklappt. Versuche es erneut."
+                document.getElementById("thanks").classList.remove("hidden")
+            }
+        }
+        function showHideCalc(){
+            const button = document.getElementById("kalorienbutton")
+            if (button.value == "Kalorienrechner starten"){button.value = "Kalorienrechner beenden"}
+            else {
+                button.value = "Kalorienrechner starten"
+                document.getElementById("kalorienreturn").classList.add("hidden")
+            }
+            document.getElementById("rechnerfeld").classList.toggle("hidden")
+        }
+        function burnedCalories(kg, duration){
+            return (7*kg*(duration/60))
+        }
+
+        function calcCalories(){
+            const laufzeit = Number(document.getElementById("laufzeit").value)
+            const kg = Number(document.getElementById("kg").value)
+            document.getElementById("laufzeit").value = ""
+            document.getElementById("kg").value = ""
+            calories = Math.round(burnedCalories(kg, laufzeit))
+            document.getElementById("kalorienreturn").textContent = `Du hast ${calories} Kalorien verbrannt.`
+            document.getElementById("kalorienreturn").classList.remove("hidden")
+        }
+
+        async function showQuote() {
+            try {
+                document.getElementById("motivationpreview").classList.add("hidden")
+                document.getElementById("quoteline").classList.remove("hidden")
+                document.getElementById("quoteline").textContent = "Lädt..."
+                const r = await fetch("https://dummyjson.com/quotes/random")
+                if (!r.ok) throw new Error("Status " + r.status)
+                const data = await r.json()
+                const quotecontent = data.quote
+                const quoteauthor = data.author
+
+                document.getElementById("quoteline").textContent = quotecontent + " ~" + quoteauthor
+            }
+            catch(error){
+                document.getElementById("quoteline").classList.remove("hidden")
+                document.getElementById("quoteline").textContent = "Zitat konnte nicht geladen werden. Versuche es nochmal."
+            }
+        }
+
+        function addMessage(sender, text){
+            const newDiv = document.createElement('div');
+
+            if (text.includes("KONTAKT_FORMULAR")) {
+                text = text.replace("KONTAKT_FORMULAR", 
+                    '<button onclick="document.getElementById(\'kontakt\').scrollIntoView()">Kontaktformular</button>'
+                );
+                newDiv.innerHTML = text
+            }
+            else {
+                newDiv.textContent = text
+            }
+            newDiv.classList.add(sender)
+            document.getElementById("chatverlauf").appendChild(newDiv)
+        }
+
+        let messages = [
+            {'role': 'system', 'content': CONFIG.systemPrompt},
+            {'role': 'assistant','content': 'Hi, ich bin Maxi, dein digitaler Assistent. Du kannst mich alles rund um das Personal Coaching von Max fragen.'}
+        ]
+
+        async function sendMessage(){
+            const chatverlauf = document.getElementById("chatverlauf")
+
+            if (document.getElementById("chatcontent").value.trim() != "") {
+                const userMessage = document.getElementById("chatcontent").value
+                document.getElementById("chatcontent").value = ""
+                addMessage("user", userMessage)
+
+                const newusermessage = {'role': 'user','content': userMessage}
+                messages.push(newusermessage)
+
+                try {
+                    const newDiv = document.createElement('div');
+                    newDiv.textContent = "Denkt nach..."
+                    newDiv.classList.add("bot")
+                    document.getElementById("chatverlauf").appendChild(newDiv)
+                    chatverlauf.scrollTop = chatverlauf.scrollHeight
+
+                    const r = await fetch('/.netlify/functions/chat', {
+                        method: 'POST',
+                        body: JSON.stringify({ messages })
+                    })
+                    
+                    if (!r.ok) throw new Error("Status " + r.status)
+                    const data = await r.json()
+
+                    const botMessage = data.choices[0].message.content
+
+                    
+                    newDiv.remove()
+                    addMessage("bot", botMessage)
+                    
+                    const newbotmessage = {'role': 'assistant', 'content': botMessage}
+                    messages.push(newbotmessage)
+                } catch (error) {
+                    const botMessage = "Ein Fehler ist aufgetreten. Versuche es nochmal."
+                    newDiv.remove()
+                    addMessage("bot", botMessage)
+                }
+
+                chatverlauf.scrollTop = chatverlauf.scrollHeight
+            }
+        }
+
+        frage1.addEventListener("click", showHideFaq)
+        frage2.addEventListener("click", showHideFaq)
+        frage3.addEventListener("click", showHideFaq)
+        mehrInfos.addEventListener("click", ausgabe)
+        kontaktbutton.addEventListener("click", openFormula)
+        contactform.addEventListener("submit", submitFormula)
+        kalorienbutton.addEventListener("click", showHideCalc)
+        calcbutton.addEventListener("click", calcCalories)
+        quotebutton.addEventListener("click", showQuote)
+        chatbutton.addEventListener("click", sendMessage)
+
+        const chatinput = document.getElementById('chatcontent')
+
+        chatinput.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            event.preventDefault()
+            sendMessage()
+        }
+        })
+    </script>
+
+    </body>
+</html>
