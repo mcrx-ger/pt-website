@@ -290,8 +290,7 @@
         }
 
         async function quickReply(message){
-            quickreplies = document.getElementById("quick-replies")
-            quickreplies.classList.add("hidden")
+            document.getElementById("quick-replies").remove()
             document.getElementById("chatcontent").value = message
             await sendMessage()
         }
