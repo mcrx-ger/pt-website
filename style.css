@@ -24,6 +24,19 @@ footer {background-color: white}
     border-radius: 10px;
 }
 
+#quick-replies {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+}
+
+.qrb {
+    border: 1px solid darkblue;
+    padding: 0.5rem;
+    margin: 10px;
+    border-radius: 15px;
+}
+
 .bot {
     max-width: 70%;
     align-self: flex-start;
