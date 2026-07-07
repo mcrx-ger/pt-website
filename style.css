@@ -36,6 +36,12 @@ footer {background-color: white}
     margin: 10px;
     border-radius: 20px;
     background-color: rgb(222, 225, 255);
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+.qrb:hover {
+    background-color: rgb(180, 190, 255);
 }
 
 .bot {
