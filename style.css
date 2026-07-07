@@ -31,10 +31,11 @@ footer {background-color: white}
 }
 
 .qrb {
-    border: 1px solid darkblue;
-    padding: 0.5rem;
+    border: 1px solid black;
+    padding: 0.4rem;
     margin: 10px;
-    border-radius: 15px;
+    border-radius: 10px;
+    background-color: rgb(222, 225, 255);
 }
 
 .bot {
