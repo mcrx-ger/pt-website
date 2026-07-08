@@ -85,32 +85,32 @@ footer {background-color: white}
 
 #buchungs-karten {
     display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
 #buchungs-karten .karte {
-  flex: 1;
-  min-width: 260px;
-  padding: 1.5rem;
-  border: 1px solid #ddd;
-  border-radius: 12px;
+    flex: 1;
+    min-width: 260px;
+    border: 2px solid darkblue; padding: 2em; margin: 10px;
+    background-color: white;
+    border-radius: 10px;
 }
 
 .cta {
-  margin-top: 5rem;
-  padding: 12px 20px;
-  font-size: 15px;
-  background: #111;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.2s;
+    margin-top: 5rem;
+    padding: 12px 20px;
+    font-size: 15px;
+    background: #111;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
 
 .cta:hover {
-  background: #333;
+    background: #333;
 }
 
 #topsection {
