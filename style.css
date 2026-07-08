@@ -89,7 +89,7 @@ footer {background-color: white}
   flex-wrap: wrap;
 }
 
-.buchung-karten .karte {
+#buchungs-karten .karte {
   flex: 1;
   min-width: 260px;
   padding: 1.5rem;
@@ -98,7 +98,7 @@ footer {background-color: white}
 }
 
 .cta {
-  margin-top: 1rem;
+  margin-top: 5rem;
   padding: 12px 20px;
   font-size: 15px;
   background: #111;
@@ -106,6 +106,7 @@ footer {background-color: white}
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.2s;
 }
 
 .cta:hover {
