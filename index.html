@@ -147,18 +147,32 @@
             <section id="buchung">
                 <h2>Termin buchen</h2>
                 <p>Wähle die passende Terminoption:</p>
-                <button
-                    data-cal-link="pt-demo-mcr/probetraining"
-                    data-cal-namespace="probetraining"
-                    data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
-                    Kostenloses Probetraining buchen
-                </button>
-                <button
-                    data-cal-link="pt-demo-mcr/probecall"
-                    data-cal-namespace="probecall"
-                    data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
-                    Erster Call-In buchen
-                </button>
+
+                <div id="buchungs-karten">
+
+                    <div class="karte">
+                        <h3>Kostenloses Probetraining</h3>
+                        <p>60 Minuten. Wir trainieren das erste Mal zusammen.</p>
+                        <button class="cta"
+                            data-cal-link="pt-demo-mcr/probetraining"
+                            data-cal-namespace="probetraining"
+                            data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
+                            Termin buchen
+                        </button>
+                    </div>
+
+                    <div class="karte">
+                        <h3>Kostenloser Call-In</h3>
+                        <p>30 Minuten. Du kannst Fragen stellen und wir besprechen deine Ziele.</p>
+                        <button class="cta"
+                            data-cal-link="pt-demo-mcr/probecall"
+                            data-cal-namespace="probecall"
+                            data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
+                            Termin buchen
+                        </button>
+                    </div>
+
+                </div>
             </section>
 
             <section id="kalorienrechner">

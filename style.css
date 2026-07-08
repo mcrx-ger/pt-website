@@ -83,6 +83,35 @@ footer {background-color: white}
     justify-content: space-evenly;
 }
 
+#buchungs-karten {
+    display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.buchung-karten .karte {
+  flex: 1;
+  min-width: 260px;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+}
+
+.cta {
+  margin-top: 1rem;
+  padding: 12px 20px;
+  font-size: 15px;
+  background: #111;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cta:hover {
+  background: #333;
+}
+
 #topsection {
     display: flex;
     flex-direction: row;
