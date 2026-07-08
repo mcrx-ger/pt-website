@@ -85,7 +85,8 @@ footer {background-color: white}
 
 #buchungs-karten {
     display: flex;
-    gap: 7.5rem;
+    gap: 1.5rem;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
