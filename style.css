@@ -86,11 +86,11 @@ footer {background-color: white}
 #buchungs-karten {
     display: flex;
     gap: 1.5rem;
-    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
 #buchungs-karten .karte {
+    flex: 1;
     min-width: 260px;
     border: 2px solid darkblue; padding: 2em; margin: 10px;
     background-color: white;
