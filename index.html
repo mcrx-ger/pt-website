@@ -272,15 +272,31 @@
         function addMessage(sender, text){
             const newDiv = document.createElement('div');
 
+            let messagereplaced = false
+
             if (text.includes("KONTAKT_FORMULAR")) {
                 text = text.replace("KONTAKT_FORMULAR", 
                     '<button onclick="document.getElementById(\'kontakt\').scrollIntoView()">Kontaktformular</button>'
                 );
+                messagereplaced = true
+            }
+
+            if (text.includes("TERMINBUCHUNG")) {
+                text = text.replace("TERMINBUCHUNG", 
+                    '<button onclick="document.getElementById(\'buchung\').scrollIntoView()">Terminbuchung</button>'
+                );
+                messagereplaced = true
+            }
+
+
+            if (messagereplaced) {
                 newDiv.innerHTML = text
             }
             else {
                 newDiv.textContent = text
             }
+
+
             newDiv.classList.add(sender)
             document.getElementById("chatverlauf").appendChild(newDiv)
         }
