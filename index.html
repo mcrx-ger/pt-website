@@ -314,9 +314,9 @@
                 const userMessage = document.getElementById("chatcontent").value
                 document.getElementById("chatcontent").value = ""
 
-                if (globalThis.quickreplyval == true){
+                if (quickreplyval == true){
                     document.getElementById("quick-replies").remove()
-                    globalThis.quickreplyval = false
+                    quickreplyval = false
                 }
 
                 addMessage("user", userMessage)
@@ -359,7 +359,7 @@
 
         async function quickReply(message){
             document.getElementById("quick-replies").remove()
-            globalThis.quickreplyval = false
+            quickreplyval = false
             document.getElementById("chatcontent").value = message
             await sendMessage()
         }
