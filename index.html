@@ -196,6 +196,7 @@
     <script src="config.js"></script>
     <script>
         let calories = 0
+        let quickreplyval = true
 
         function ausgabe(){
             const button1 = document.getElementById("mehrInfos")
@@ -312,6 +313,12 @@
             if (document.getElementById("chatcontent").value.trim() != "") {
                 const userMessage = document.getElementById("chatcontent").value
                 document.getElementById("chatcontent").value = ""
+
+                if (globalThis.quickreplyval == true){
+                    document.getElementById("quick-replies").remove()
+                    globalThis.quickreplyval = false
+                }
+
                 addMessage("user", userMessage)
 
                 const newusermessage = {'role': 'user','content': userMessage}
@@ -352,6 +359,7 @@
 
         async function quickReply(message){
             document.getElementById("quick-replies").remove()
+            globalThis.quickreplyval = false
             document.getElementById("chatcontent").value = message
             await sendMessage()
         }
