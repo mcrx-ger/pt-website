@@ -2,159 +2,125 @@
 <html lang="de">
     <head>
         <meta charset="UTF-8">
-        <title>Max M. - Personal Trainer Stuttgart</title>
+        <title>Max Müller – Personal Trainer in Stuttgart</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="bizeps.png" type="image/x-icon">
+        <link rel="icon" href="bizeps.png" type="image/png">
         <link rel="stylesheet" href="style.css">
+
+        <script type="text/javascript">
+            (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+            Cal("init", "probetraining", {origin:"https://app.cal.com"});
+            Cal("init", "probecall", {origin:"https://app.cal.com"});
+            Cal("init", "trainingseinheit", {origin:"https://app.cal.com"});
+
+            Cal.config = Cal.config || {};
+            Cal.config.forwardQueryParams = true;
+
+            Cal.ns.probetraining("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+            Cal.ns.probecall("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+            Cal.ns.trainingseinheit("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+        </script>
     </head>
 
-    <script type="text/javascript">
-        (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-        Cal("init", "probetraining", {origin:"https://app.cal.com"});
-        Cal("init", "probecall", {origin:"https://app.cal.com"});
-        Cal("init", "trainingseinheit", {origin:"https://app.cal.com"});
-
-        Cal.config = Cal.config || {};
-        Cal.config.forwardQueryParams = true;
-
-        Cal.ns.probetraining("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-        Cal.ns.probecall("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-        Cal.ns.trainingseinheit("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-    </script>
-
     <body>
+        <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
         <header>
             <section id="topsection">
                 <div class="iconname">
-                    <img src="bizeps.png" id="bizeps">
+                    <img src="bizeps.png" alt="" id="bizeps">
                     <p>Max Müller</p>
                 </div>
-                <nav>
+                <nav aria-label="Hauptnavigation">
+                    <a href="#ueber-mich">Über mich</a>
                     <a href="#angebote">Angebote</a>
-                    <a href="#motivationszitat">Motivation</a>
+                    <a href="#buchung">Termin</a>
                     <a href="#faq">FAQ</a>
-                    <a href="#chat">Chatbot</a>
+                    <a href="#rezensionen">Bewertungen</a>
                     <a href="#kontakt">Kontakt</a>
-                    <a href="#buchung">Terminbuchung</a>
-                    <a href="#kalorienrechner">Kalorienrechner</a>
                 </nav>
             </section>
-            <h1>Dein Personal Trainer in Stuttgart</h1>
-            <p>Ich helfe dir, deine Fitnessziele wirklich zu erreichen.</p>
+
+            <section id="hero">
+                <h1>Du musst nicht fit sein, um anzufangen.</h1>
+                <p>Persönliches Training in Stuttgart – in deinem Tempo, ohne Druck und ohne das Gefühl, alle schauen zu.</p>
+                <div class="hero-actions">
+                    <a href="#buchung" class="cta">Termin buchen</a>
+                    <a href="#chat" class="cta-secondary" onclick="startChat(event)">Chat starten</a>
+                </div>
+            </section>
         </header>
-        <main>
+
+        <main id="inhalt">
             <section id="ueber-mich">
                 <h2>Über mich</h2>
-                <img src="trainer.jpg" alt="Max Müller, Personal Trainer">
-                <p>Ich bin Max, zertifizierter Personal Trainer mit 5 Jahren Erfahrung.</p>
-                <input id="mehrInfos" type="button" value="Mehr Infos">
-                <div class="hidden" id="info1">
-                    <p>Ich habe meine <strong>Leidenschaft</strong> zum Beruf gemacht. Als Trainer war ich bereits tätig bei</p>
-                    <ol>
-                        <li>Vfb Stuttgart</li>
-                        <li>Hertha BSC</li>
-                        <li>FC Bayern München U21</li>
-                    </ol>
-                </div>
+                <!-- Prototyp: Platzhalter-Illustration. In echten Projekten kommt hier ein echtes Foto von Max hin. -->
+                <img src="trainer.jpg" alt="Max Müller, Personal Trainer aus Stuttgart">
+                <p>Ich bin Max, 34, und trainiere in Stuttgart vor allem Menschen, die mit dem Gedanken „eigentlich müsste ich mal" schon eine ganze Weile herumlaufen. Ich kenne das Gefühl selbst: Ich habe früher zwei Jahre gebraucht, um im Fitnessstudio nicht mehr das Gefühl zu haben, alle sehen mir zu. Genau da hole ich dich ab.</p>
+                <p>Ich habe Sportwissenschaft studiert, bin seit fünf Jahren als Trainer mit B-Lizenz unterwegs und arbeite die meiste Zeit mit ganz normalen Leuten – Büro-Rücken, wenig Zeit, lange keinen Sport gemacht. Kein Leistungsdruck, keine großen Sprüche. Wir fangen da an, wo du gerade stehst.</p>
+                <p>Trainiert wird in einem kleinen Studio in Stuttgart-West oder bei dir zu Hause. Für mich zählt am Ende nicht, wie viel du hebst, sondern dass du in drei Monaten noch dabei bist.</p>
+                <p class="section-cta"><a href="#buchung" class="cta">Kennenlern-Termin buchen</a></p>
             </section>
 
             <section id="angebote">
-                <h2>Meine Angebote</h2>
+                <h2>So arbeiten wir zusammen</h2>
 
                 <div id="karten">
                     <div class="karte">
                         <h3>Einzeltraining</h3>
-                        <p>1:1 Training, komplett auf dich zugeschnitten.</p>
+                        <p>1:1 im Studio oder bei dir zu Hause. Wir bauen dein Training um deinen Alltag herum, nicht umgekehrt. Du musst nichts können – ich zeige dir jede Übung in Ruhe.</p>
                     </div>
 
                     <div class="karte">
                         <h3>Online-Coaching</h3>
-                        <p>Trainingsplan + wöchentlicher Check-in per Video.</p>
+                        <p>Für alle, die flexibel bleiben wollen: dein Plan auf dem Handy, dazu ein fester Video-Check-in pro Woche. Ich bleibe dran, auch wenn wir uns nicht persönlich sehen.</p>
                     </div>
 
                     <div class="karte">
                         <h3>Ernährungsberatung</h3>
-                        <p>Individueller Ernährungsplan ohne Verbote.</p>
+                        <p>Keine Verbote, keine komplizierten Rechnereien. Wir finden Dinge, die in dein Leben passen – und die du auch nächsten Monat noch machst.</p>
                     </div>
                 </div>
-                
+
+                <p class="section-cta"><a href="#buchung" class="cta">Termin buchen</a></p>
             </section>
 
-            <section id="motivationszitat">
-                <h2>Motivationszitat</h2>
+            <section id="testimonials">
+                <h2>Was andere sagen</h2>
+                <!-- Prototyp: Testimonials frei erfunden. In echten Projekten 3 handverlesene Stimmen, am besten mit Foto. -->
+                <div id="testimonial-karten">
+                    <figure class="testimonial">
+                        <blockquote>
+                            <p>Ich hatte seit dem Studium keinen Sport mehr gemacht und ehrlich gesagt Respekt vorm Fitnessstudio. Max hat null Aufhebens darum gemacht. Nach vier Monaten gehe ich zum ersten Mal freiwillig trainieren – das hätte ich vorher nicht geglaubt.</p>
+                        </blockquote>
+                        <figcaption>Katharina, 38 · Projektmanagerin</figcaption>
+                    </figure>
 
-                <div id="motivationpreview">
-                    <p>Lass ein Zitat auswählen. Ganz für dich allein. Neugierig?</p>
-                    <input type="button" id="quotebutton" value="Zeigen">
+                    <figure class="testimonial">
+                        <blockquote>
+                            <p>Mein Rücken vom Bürojob war der eigentliche Grund. Wir haben klein angefangen, zweimal die Woche, nichts Verrücktes. Die Schmerzen sind fast weg und ich trage meine Kinder wieder ohne Fluchen die Treppe hoch.</p>
+                        </blockquote>
+                        <figcaption>Tobias, 41 · Ingenieur</figcaption>
+                    </figure>
+
+                    <figure class="testimonial">
+                        <blockquote>
+                            <p>Kein „in 12 Wochen zur Traumfigur"-Gerede. Max fragt, wie meine Woche war, bevor er den Plan anpasst. Genau das hat mir vorher gefehlt. Ich fühle mich zum ersten Mal seit Langem wieder wohl in meiner Haut.</p>
+                        </blockquote>
+                        <figcaption>Sarah, 32 · zurück zum Sport nach der Elternzeit</figcaption>
+                    </figure>
                 </div>
-                <p id="quoteline" class="hidden"></p>
-                
-            </section>
-
-            <section id="faq">
-                <h2>FAQ</h2>
-                <input id="frage1" type="button" value="Wie viel kostet 1 Monat Coaching?">
-                <p class="hidden">In den meisten Fällen zwischen 200 und 500 Euro.</p>
-                <input id="frage2" type="button" value="Welche Sportarten sind mit deinem Coaching kompatibel?">
-                <p class="hidden">Gym und multifunktionales Training. Fußball, Schwimmen, Radfahren, Laufen und Volleyball.</p>
-                <input id="frage3" type="button" value="Betreust du nur Profis?">
-                <p class="hidden">Mein Coaching richtet sich an alle Sportler und diejenigen, die es werden möchten.</p>
-            </section>
-
-            <section id="chat">
-                <h2>Chatbot</h2>
-                <div id="chatwidget">
-                    <div id="chatverlauf">
-                        <div class="bot">Hi, ich bin Maxi! Ich beantworte alle Fragen rund ums Coaching von Max. Was kann ich für dich tun?</div>
-                        <div id="quick-replies">
-                            <button onclick="quickReply('Was kostet das Coaching?')" class="qrb">Preise</button>
-                            <button onclick="quickReply('Ich möchte einen Termin buchen')" class="qrb">Termin</button>
-                            <button onclick="quickReply('Was sind deine Angebote?')" class="qrb">Angebote</button>
-                        </div>
-                    </div>
-                    <div id="messagefield">
-                        <input type="text" id="chatcontent" placeholder="Gib hier deine Nachricht ein">
-                        <input id="chatbutton" type="button" value="Senden">
-                    </div>
-                </div>
-            </section>
-
-            <section id="kontakt">
-                <h2>Kontakt</h2>
-                <p>Schreib mir: <a href="mailto:max@beispiel.de">max@beispiel.de</a></p>
-                <div id="kontaktformularabschnitt">
-                    <p>Oder nutze das <input id="kontaktbutton" type="button" value="Kontaktformular"></p>
-                    <form action="" method="get" class="hidden" id="contactform">
-                        <div>
-                            <label for="name">Dein Name: </label>
-                            <input type="text" name="name" id="name" required>
-                        </div>
-                        <div>
-                            <label for="email">Deine E-mail: </label>
-                            <input type="email" name="email" id="email" required>
-                        </div>
-                        <div>
-                            <label for="message">Deine Nachricht / Wünsche: </label>
-                            <input type="text" name="message" id="message" required>
-                        </div>
-                        <div>
-                            <input type="submit" value="Abschicken">
-                        </div>
-                    </form>
-                </div>
-                
-                <p class="hidden" id="thanks"></p>
             </section>
 
             <section id="buchung">
-                <h2>Terminbuchung</h2>
-                <p>Wähle die passende Terminoption:</p>
+                <h2>Termin buchen</h2>
+                <p>Wähle die Option, die gerade zu dir passt. Die ersten beiden sind kostenlos und unverbindlich.</p>
 
                 <div id="buchungs-karten">
 
                     <div class="karte">
                         <h3>Kostenloses Probetraining</h3>
-                        <p>60 Minuten. Wir trainieren das erste Mal zusammen.</p>
+                        <p>60 Minuten, wir trainieren einmal zusammen. Du merkst direkt, ob es zwischen uns passt – ganz ohne Verpflichtung.</p>
                         <button class="cta"
                             data-cal-link="pt-demo-mcr/probetraining"
                             data-cal-namespace="probetraining"
@@ -164,8 +130,8 @@
                     </div>
 
                     <div class="karte">
-                        <h3>Kostenloser Call-In</h3>
-                        <p>30 Minuten. Du kannst Fragen stellen und wir besprechen deine Ziele.</p>
+                        <h3>Kostenloses Kennenlern-Gespräch</h3>
+                        <p>30 Minuten am Telefon oder per Video. Du erzählst mir dein Ziel, ich sage dir ehrlich, ob und wie ich dir helfen kann.</p>
                         <button class="cta"
                             data-cal-link="pt-demo-mcr/probecall"
                             data-cal-namespace="probecall"
@@ -176,7 +142,7 @@
 
                     <div class="karte">
                         <h3>1:1 Trainingseinheit</h3>
-                        <p>Eine gemeinsame Trainingseinheit vor Ort für bestehende Kunden.</p>
+                        <p>Eine gemeinsame Einheit vor Ort – für bestehende Kunden, die eine einzelne Session dazubuchen möchten.</p>
                         <button class="cta"
                             data-cal-link="pt-demo-mcr/trainingseinheit"
                             data-cal-namespace="trainingseinheit"
@@ -188,41 +154,109 @@
                 </div>
             </section>
 
-            <section id="kalorienrechner">
-                <h2>Kalorienrechner</h2>
-                <p>Hier kannst du berechnen, wie viele Kalorien du beim lockeren Joggen verbrennst.</p>
-                <input type="button" id="kalorienbutton" value="Kalorienrechner starten">
-                <div class="hidden" id="rechnerfeld">
-                    <input type="number" id="laufzeit" placeholder="Dauer des Laufs (in min)">
-                    <input type="number" id="kg" placeholder="Körpergewicht (in kg)">
-                    <p class="hidden" id="kalorienreturn">Du hast ... Kalorien verbrannt.</p>
-                    <input type="button" id="calcbutton" value="Berechnen">
+            <section id="faq">
+                <h2>Häufige Fragen</h2>
+                <div class="faq">
+                    <details>
+                        <summary>Was kostet das Ganze?</summary>
+                        <p>Ein Monat Coaching liegt meistens zwischen 200 und 500 Euro – je nachdem, wie oft wir trainieren und ob Ernährung dazukommt. Was für dich Sinn ergibt, klären wir vorher in Ruhe, bevor du dich festlegst.</p>
+                    </details>
+                    <details>
+                        <summary>Ich bin ziemlich untrainiert. Bin ich hier falsch?</summary>
+                        <p>Im Gegenteil – mit genau solchen Leuten arbeite ich am liebsten. Es gibt keine Voraussetzung außer der, dass du anfangen willst. Wir starten in deinem Tempo.</p>
+                    </details>
+                    <details>
+                        <summary>Welche Sportarten passen zu deinem Coaching?</summary>
+                        <p>Gym und funktionelles Training sind die Basis. Wenn du daneben Fußball, Laufen, Radfahren, Schwimmen oder Volleyball machst, bauen wir das mit ein.</p>
+                    </details>
+                    <details>
+                        <summary>Muss ich mich langfristig binden?</summary>
+                        <p>Nein. Wir fangen mit einem kostenlosen Kennenlernen an. Wie es weitergeht, entscheidest du danach – keinen Knebelvertrag, kein Kleingedrucktes.</p>
+                    </details>
+                    <details>
+                        <summary>Wo findet das Training statt?</summary>
+                        <p>In einem kleinen Studio in Stuttgart-West oder bei dir zu Hause. Online-Coaching geht von überall aus.</p>
+                    </details>
                 </div>
-                
+                <p class="section-cta">Noch etwas unklar? <a href="#chat">Frag Maxi im Chat.</a></p>
+            </section>
+
+            <section id="rezensionen">
+                <h2>Google-Bewertungen</h2>
+                <!-- Prototyp: später echte Google-Rezensionen einbinden. Jetzt nur als Andeutung. -->
+                <div class="rating" role="img" aria-label="4,9 von 5 Sternen aus 37 Google-Rezensionen">
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <span class="score" aria-hidden="true">4,9 von 5</span>
+                    <span class="count" aria-hidden="true">· 37 Rezensionen</span>
+                </div>
+                <p>Die Bewertungen stammen von Kundinnen und Kunden aus Stuttgart und Umgebung.</p>
+            </section>
+
+            <section id="chat">
+                <h2>Schnelle Frage? Frag Maxi</h2>
+                <p>Maxi ist mein digitaler Assistent und beantwortet die häufigsten Fragen sofort – rund um die Uhr.</p>
+                <div id="chatwidget">
+                    <div id="chatverlauf" role="log" aria-live="polite" aria-label="Chatverlauf mit Maxi">
+                        <div class="bot">Hi, ich bin Maxi! Ich beantworte alle Fragen rund ums Coaching von Max. Was kann ich für dich tun?</div>
+                        <div id="quick-replies">
+                            <button onclick="quickReply('Was kostet das Coaching?')" class="qrb">Preise</button>
+                            <button onclick="quickReply('Ich möchte einen Termin buchen')" class="qrb">Termin</button>
+                            <button onclick="quickReply('Was sind deine Angebote?')" class="qrb">Angebote</button>
+                        </div>
+                    </div>
+                    <div id="messagefield">
+                        <label for="chatcontent" class="visually-hidden">Deine Nachricht an Maxi</label>
+                        <input type="text" id="chatcontent" placeholder="Gib hier deine Nachricht ein">
+                        <button id="chatbutton" type="button">Senden</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="kontakt">
+                <h2>Kontakt</h2>
+                <p>Lieber direkt schreiben? Kein Problem.</p>
+                <address>
+                    Schreib mir an <a href="mailto:max@beispiel.de">max@beispiel.de</a> – oder nutz das Formular.
+                </address>
+                <div id="kontaktformularabschnitt">
+                    <form action="" method="post" id="contactform">
+                        <div>
+                            <label for="name">Dein Name</label>
+                            <input type="text" name="name" id="name" required>
+                        </div>
+                        <div>
+                            <label for="email">Deine E-Mail</label>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+                        <div>
+                            <label for="message">Deine Nachricht / Wünsche</label>
+                            <textarea name="message" id="message" rows="5" required></textarea>
+                        </div>
+                        <div>
+                            <button type="submit">Nachricht schreiben</button>
+                        </div>
+                    </form>
+                </div>
+
+                <p class="hidden" id="thanks"></p>
             </section>
 
         </main>
+
         <footer>
-            <p>© 2025 Max Müller · Personal Trainer Stuttgart</p>
+            <p>© 2026 Max Müller · Personal Trainer in Stuttgart</p>
         </footer>
 
     <script src="config.js"></script>
     <script>
-        let calories = 0
         let quickreplyval = true
 
-        function ausgabe(){
-            const button1 = document.getElementById("mehrInfos")
-            if (button1.value == "Weniger Infos"){button1.value = "Mehr Infos"}
-            else {button1.value = "Weniger Infos"}
-            document.getElementById("info1").classList.toggle("hidden")
+        function startChat(event){
+            if (event) event.preventDefault()
+            document.getElementById("chat").scrollIntoView({ behavior: "smooth" })
+            document.getElementById("chatcontent").focus({ preventScroll: true })
         }
-        function showHideFaq(event) {
-            event.target.nextElementSibling.classList.toggle("hidden")
-        }
-        function openFormula(){
-            document.getElementById("contactform").classList.toggle("hidden")
-        }
+
         async function submitFormula(event){
             event.preventDefault();
             try {
@@ -241,47 +275,6 @@
                 document.getElementById("thanks").classList.remove("hidden")
             }
         }
-        function showHideCalc(){
-            const button = document.getElementById("kalorienbutton")
-            if (button.value == "Kalorienrechner starten"){button.value = "Kalorienrechner beenden"}
-            else {
-                button.value = "Kalorienrechner starten"
-                document.getElementById("kalorienreturn").classList.add("hidden")
-            }
-            document.getElementById("rechnerfeld").classList.toggle("hidden")
-        }
-        function burnedCalories(kg, duration){
-            return (7*kg*(duration/60))
-        }
-
-        function calcCalories(){
-            const laufzeit = Number(document.getElementById("laufzeit").value)
-            const kg = Number(document.getElementById("kg").value)
-            document.getElementById("laufzeit").value = ""
-            document.getElementById("kg").value = ""
-            calories = Math.round(burnedCalories(kg, laufzeit))
-            document.getElementById("kalorienreturn").textContent = `Du hast ${calories} Kalorien verbrannt.`
-            document.getElementById("kalorienreturn").classList.remove("hidden")
-        }
-
-        async function showQuote() {
-            try {
-                document.getElementById("motivationpreview").classList.add("hidden")
-                document.getElementById("quoteline").classList.remove("hidden")
-                document.getElementById("quoteline").textContent = "Lädt..."
-                const r = await fetch("https://dummyjson.com/quotes/random")
-                if (!r.ok) throw new Error("Status " + r.status)
-                const data = await r.json()
-                const quotecontent = data.quote
-                const quoteauthor = data.author
-
-                document.getElementById("quoteline").textContent = quotecontent + " ~" + quoteauthor
-            }
-            catch(error){
-                document.getElementById("quoteline").classList.remove("hidden")
-                document.getElementById("quoteline").textContent = "Zitat konnte nicht geladen werden. Versuche es nochmal."
-            }
-        }
 
         function addMessage(sender, text){
             const newDiv = document.createElement('div');
@@ -289,14 +282,14 @@
             let messagereplaced = false
 
             if (text.includes("KONTAKT_FORMULAR")) {
-                text = text.replace("KONTAKT_FORMULAR", 
+                text = text.replace("KONTAKT_FORMULAR",
                     '<button onclick="document.getElementById(\'kontakt\').scrollIntoView()">Kontaktformular</button>'
                 );
                 messagereplaced = true
             }
 
             if (text.includes("TERMINBUCHUNG")) {
-                text = text.replace("TERMINBUCHUNG", 
+                text = text.replace("TERMINBUCHUNG",
                     '<button onclick="document.getElementById(\'buchung\').scrollIntoView()">Terminbuchung</button>'
                 );
                 messagereplaced = true
@@ -348,16 +341,16 @@
                         method: 'POST',
                         body: JSON.stringify({ messages })
                     })
-                    
+
                     if (!r.ok) throw new Error("Status " + r.status)
                     const data = await r.json()
 
                     const botMessage = data.choices[0].message.content
 
-                    
+
                     newDiv.remove()
                     addMessage("bot", botMessage)
-                    
+
                     const newbotmessage = {'role': 'assistant', 'content': botMessage}
                     messages.push(newbotmessage)
                 } catch (error) {
@@ -377,15 +370,7 @@
             await sendMessage()
         }
 
-        frage1.addEventListener("click", showHideFaq)
-        frage2.addEventListener("click", showHideFaq)
-        frage3.addEventListener("click", showHideFaq)
-        mehrInfos.addEventListener("click", ausgabe)
-        kontaktbutton.addEventListener("click", openFormula)
         contactform.addEventListener("submit", submitFormula)
-        kalorienbutton.addEventListener("click", showHideCalc)
-        calcbutton.addEventListener("click", calcCalories)
-        quotebutton.addEventListener("click", showQuote)
         chatbutton.addEventListener("click", sendMessage)
 
         const chatinput = document.getElementById('chatcontent')
