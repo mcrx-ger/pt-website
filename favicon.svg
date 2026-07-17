@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Fabian Kern">
+  <rect width="32" height="32" rx="7" fill="#17161a"/>
+  <g fill="none" stroke="#e1552b" stroke-width="2.6" stroke-linecap="round">
+    <path d="M8 16h16"/>
+  </g>
+  <g fill="#e1552b">
+    <rect x="4.5" y="10.5" width="3.4" height="11" rx="1.5"/>
+    <rect x="24.1" y="10.5" width="3.4" height="11" rx="1.5"/>
+    <rect x="8.4" y="12.5" width="2.6" height="7" rx="1.2"/>
+    <rect x="21" y="12.5" width="2.6" height="7" rx="1.2"/>
+  </g>
+</svg>

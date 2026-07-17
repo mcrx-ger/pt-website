@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pt-demo-mcr.netlify.app/sitemap.xml

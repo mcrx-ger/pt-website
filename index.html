@@ -1,387 +1,511 @@
 <!DOCTYPE html>
-<html lang="de">
-    <head>
-        <meta charset="UTF-8">
-        <title>Max Müller – Personal Trainer in Stuttgart</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="bizeps.png" type="image/png">
-        <link rel="stylesheet" href="style.css">
+<html lang="de-DE">
+<head>
+    <script>document.documentElement.classList.add('js');</script>
+    <meta charset="UTF-8">
+    <title>Personal Trainer Stuttgart - Fabian Kern</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Trainer in Stuttgart-West für alle Level: Kraft- und Funktionstraining mit Plan. Über 120 betreute Kunden. Jetzt kostenloses Probetraining buchen.">
 
-        <script type="text/javascript">
-            (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-            Cal("init", "probetraining", {origin:"https://app.cal.com"});
-            Cal("init", "probecall", {origin:"https://app.cal.com"});
-            Cal("init", "trainingseinheit", {origin:"https://app.cal.com"});
+    <!-- Demo-Prototyp auf pt-demo-mcr.netlify.app. Adresse, Telefon und Bewertungen im Schema sind frei erfundene Demo-Daten. -->
+    <link rel="canonical" href="https://pt-demo-mcr.netlify.app/">
 
-            Cal.config = Cal.config || {};
-            Cal.config.forwardQueryParams = true;
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Fabian Kern Personal Training">
+    <meta property="og:title" content="Personal Trainer Stuttgart - Fabian Kern">
+    <meta property="og:description" content="Kraft- und Funktionstraining in Stuttgart-West, für Einsteiger wie Fortgeschrittene. Jetzt kostenloses Probetraining buchen.">
+    <meta property="og:url" content="https://pt-demo-mcr.netlify.app/">
+    <meta property="og:image" content="https://pt-demo-mcr.netlify.app/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Training im Studio bei Fabian Kern in Stuttgart">
 
-            Cal.ns.probetraining("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-            Cal.ns.probecall("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-            Cal.ns.trainingseinheit("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-        </script>
-    </head>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Personal Trainer Stuttgart - Fabian Kern">
+    <meta name="twitter:description" content="Kraft- und Funktionstraining in Stuttgart-West, für Einsteiger wie Fortgeschrittene. Jetzt kostenloses Probetraining buchen.">
+    <meta name="twitter:image" content="https://pt-demo-mcr.netlify.app/images/og-image.jpg">
 
-    <body>
-        <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+    <meta name="theme-color" content="#161318">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
 
-        <header>
-            <section id="topsection">
-                <div class="iconname">
-                    <img src="bizeps.png" alt="" id="bizeps">
-                    <p>Max Müller</p>
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script type="text/javascript">
+        (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+        Cal("init", "probetraining", {origin:"https://app.cal.com"});
+        Cal("init", "probecall", {origin:"https://app.cal.com"});
+        Cal("init", "trainingseinheit", {origin:"https://app.cal.com"});
+        Cal.config = Cal.config || {};
+        Cal.config.forwardQueryParams = true;
+        Cal.ns.probetraining("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+        Cal.ns.probecall("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+        Cal.ns.trainingseinheit("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://pt-demo-mcr.netlify.app/#business",
+          "name": "Fabian Kern Personal Training",
+          "description": "Personal Training in Stuttgart-West: Kraft- und Funktionstraining für Einsteiger wie Fortgeschrittene.",
+          "url": "https://pt-demo-mcr.netlify.app/",
+          "telephone": "+49 711 5550185",
+          "email": "fabian@beispiel.de",
+          "image": "https://pt-demo-mcr.netlify.app/images/og-image.jpg",
+          "priceRange": "€€",
+          "currenciesAccepted": "EUR",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Musterstraße 1",
+            "postalCode": "70197",
+            "addressLocality": "Stuttgart",
+            "addressRegion": "Baden-Württemberg",
+            "addressCountry": "DE"
+          },
+          "geo": { "@type": "GeoCoordinates", "latitude": 48.7726, "longitude": 9.1566 },
+          "areaServed": { "@type": "City", "name": "Stuttgart" },
+          "openingHoursSpecification": [
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:00", "closes": "20:00" },
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "14:00" }
+          ],
+          "founder": { "@id": "https://pt-demo-mcr.netlify.app/#trainer" },
+          "employee": { "@id": "https://pt-demo-mcr.netlify.app/#trainer" }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://pt-demo-mcr.netlify.app/#trainer",
+          "name": "Fabian Kern",
+          "jobTitle": "Personal Trainer",
+          "worksFor": { "@id": "https://pt-demo-mcr.netlify.app/#business" },
+          "image": "https://pt-demo-mcr.netlify.app/images/og-image.jpg",
+          "knowsAbout": ["Krafttraining", "Funktionelles Training", "Ernährungsberatung"]
+        },
+        {
+          "@type": "Service",
+          "name": "Kostenloses Probetraining",
+          "serviceType": "Personal Training",
+          "provider": { "@id": "https://pt-demo-mcr.netlify.app/#business" },
+          "areaServed": { "@type": "City", "name": "Stuttgart" },
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+        },
+        {
+          "@type": "Service",
+          "name": "Einzeltraining",
+          "serviceType": "Personal Training",
+          "provider": { "@id": "https://pt-demo-mcr.netlify.app/#business" },
+          "areaServed": { "@type": "City", "name": "Stuttgart" },
+          "offers": {
+            "@type": "Offer",
+            "priceSpecification": { "@type": "PriceSpecification", "minPrice": 200, "maxPrice": 500, "priceCurrency": "EUR" }
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Online-Coaching",
+          "serviceType": "Personal Training",
+          "provider": { "@id": "https://pt-demo-mcr.netlify.app/#business" },
+          "areaServed": { "@type": "Country", "name": "Deutschland" }
+        },
+        {
+          "@type": "Service",
+          "name": "Ernährungsberatung",
+          "serviceType": "Ernährungsberatung",
+          "provider": { "@id": "https://pt-demo-mcr.netlify.app/#business" }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://pt-demo-mcr.netlify.app/#faq",
+          "mainEntity": [
+            { "@type": "Question", "name": "Was kostet ein Probetraining?", "acceptedAnswer": { "@type": "Answer", "text": "Das Probetraining ist kostenlos und dauert 60 Minuten. Wir trainieren einmal zusammen, danach entscheidest du in Ruhe, ob du weitermachen willst." } },
+            { "@type": "Question", "name": "Bin ich fit genug für Personal Training?", "acceptedAnswer": { "@type": "Answer", "text": "Ja. Du brauchst keine Vorerfahrung und keine Grundfitness. Ein großer Teil meiner Kunden hat bei null angefangen. Wir starten mit den Basics und steigern in deinem Tempo." } },
+            { "@type": "Question", "name": "Wo trainieren wir?", "acceptedAnswer": { "@type": "Answer", "text": "Wir trainieren in meinem Studio in Stuttgart-West oder bei dir zu Hause. Online-Coaching geht von überall." } },
+            { "@type": "Question", "name": "Wie oft sollte ich pro Woche trainieren?", "acceptedAnswer": { "@type": "Answer", "text": "Für den Anfang reichen 2 Einheiten pro Woche. Die meisten meiner Kunden trainieren 2 bis 3 Mal, den Plan passe ich an deinen Alltag an." } },
+            { "@type": "Question", "name": "Was ist der Unterschied zu einem normalen Gym?", "acceptedAnswer": { "@type": "Answer", "text": "Im Gym trainierst du allein. Beim Personal Training bekommst du einen Plan, Technik-Korrektur und jemanden, der dranbleibt. Du machst weniger Fehler und kommst schneller voran." } },
+            { "@type": "Question", "name": "Was kostet das Coaching?", "acceptedAnswer": { "@type": "Answer", "text": "Ein Monat Coaching liegt meist zwischen 200 und 500 Euro, je nach Frequenz und ob Ernährung dazukommt. Was für dich passt, klären wir vorher offen." } },
+            { "@type": "Question", "name": "Muss ich mich langfristig binden?", "acceptedAnswer": { "@type": "Answer", "text": "Nein. Wir starten mit einem kostenlosen Kennenlernen, danach entscheidest du. Keine Mindestlaufzeit, kein Kleingedrucktes." } }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+    <header class="site-header">
+        <div class="container nav">
+            <a class="brand" href="#top" aria-label="Fabian Kern, Startseite">
+                <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#17161a"/><g fill="none" stroke="#e1552b" stroke-width="2.6" stroke-linecap="round"><path d="M8 16h16"/></g><g fill="#e1552b"><rect x="4.5" y="10.5" width="3.4" height="11" rx="1.5"/><rect x="24.1" y="10.5" width="3.4" height="11" rx="1.5"/><rect x="8.4" y="12.5" width="2.6" height="7" rx="1.2"/><rect x="21" y="12.5" width="2.6" height="7" rx="1.2"/></g></svg>
+                Fabian Kern
+            </a>
+            <nav class="nav__links" aria-label="Hauptnavigation">
+                <a href="#ueber-mich">Über mich</a>
+                <a href="#angebote">Angebote</a>
+                <a href="#buchung">Termine</a>
+                <a href="#testimonials">Bewertungen</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+            <div class="nav__right">
+                <a class="btn btn--accent" href="#buchung">Termin buchen</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="inhalt">
+        <span id="top"></span>
+
+        <!-- HERO -->
+        <section class="hero-b">
+            <div class="hero-b__media">
+                <picture>
+                    <source type="image/webp" srcset="images/kettlebell-1600.webp">
+                    <img src="images/kettlebell-1600.jpg" alt="Trainierender hält eine Kettlebell im Studio" width="1600" height="2400" fetchpriority="high">
+                </picture>
+            </div>
+            <div class="hero-b__scrim"></div>
+            <div class="container hero-b__inner">
+                <span class="hero-b__eyebrow">Personal Training · Stuttgart-West</span>
+                <h1>Krafttraining in Stuttgart, <span class="accent">für jedes Level.</span></h1>
+                <p class="hero-b__sub">Für Einsteiger wie Fortgeschrittene. Persönliches Coaching, das Anfänger ernst nimmt und Fortgeschrittene fordert.</p>
+                <div class="hero-b__cta">
+                    <a class="btn btn--accent btn--lg" href="#buchung">Termin buchen</a>
+                    <button class="btn btn--glass btn--lg" type="button" data-open-chat>Chat starten</button>
                 </div>
-                <nav aria-label="Hauptnavigation">
-                    <a href="#ueber-mich">Über mich</a>
-                    <a href="#angebote">Angebote</a>
-                    <a href="#buchung">Termin</a>
-                    <a href="#faq">FAQ</a>
-                    <a href="#rezensionen">Bewertungen</a>
-                    <a href="#kontakt">Kontakt</a>
-                </nav>
-            </section>
+            </div>
+        </section>
 
-            <section id="hero">
-                <h1>Du musst nicht fit sein, um anzufangen.</h1>
-                <p>Persönliches Training in Stuttgart – in deinem Tempo, ohne Druck und ohne das Gefühl, alle schauen zu.</p>
-                <div class="hero-actions">
-                    <a href="#buchung" class="cta">Termin buchen</a>
-                    <a href="#chat" class="cta-secondary" onclick="startChat(event)">Chat starten</a>
+        <!-- STATBAR -->
+        <section class="statbar" aria-label="Auf einen Blick">
+            <div class="container statbar__row">
+                <div class="stat">
+                    <div class="statbar__num">4,9<span class="star"> ★</span></div>
+                    <div class="statbar__label">Google-Bewertung aus 37 Rezensionen</div>
                 </div>
-            </section>
-        </header>
-
-        <main id="inhalt">
-            <section id="ueber-mich">
-                <h2>Über mich</h2>
-                <!-- Prototyp: Platzhalter-Illustration. In echten Projekten kommt hier ein echtes Foto von Max hin. -->
-                <img src="trainer.jpg" alt="Max Müller, Personal Trainer aus Stuttgart">
-                <p>Ich bin Max, 34, und trainiere in Stuttgart vor allem Menschen, die mit dem Gedanken „eigentlich müsste ich mal" schon eine ganze Weile herumlaufen. Ich kenne das Gefühl selbst: Ich habe früher zwei Jahre gebraucht, um im Fitnessstudio nicht mehr das Gefühl zu haben, alle sehen mir zu. Genau da hole ich dich ab.</p>
-                <p>Ich habe Sportwissenschaft studiert, bin seit fünf Jahren als Trainer mit B-Lizenz unterwegs und arbeite die meiste Zeit mit ganz normalen Leuten – Büro-Rücken, wenig Zeit, lange keinen Sport gemacht. Kein Leistungsdruck, keine großen Sprüche. Wir fangen da an, wo du gerade stehst.</p>
-                <p>Trainiert wird in einem kleinen Studio in Stuttgart-West oder bei dir zu Hause. Für mich zählt am Ende nicht, wie viel du hebst, sondern dass du in drei Monaten noch dabei bist.</p>
-                <p class="section-cta"><a href="#buchung" class="cta">Kennenlern-Termin buchen</a></p>
-            </section>
-
-            <section id="angebote">
-                <h2>So arbeiten wir zusammen</h2>
-
-                <div id="karten">
-                    <div class="karte">
-                        <h3>Einzeltraining</h3>
-                        <p>1:1 im Studio oder bei dir zu Hause. Wir bauen dein Training um deinen Alltag herum, nicht umgekehrt. Du musst nichts können – ich zeige dir jede Übung in Ruhe.</p>
-                    </div>
-
-                    <div class="karte">
-                        <h3>Online-Coaching</h3>
-                        <p>Für alle, die flexibel bleiben wollen: dein Plan auf dem Handy, dazu ein fester Video-Check-in pro Woche. Ich bleibe dran, auch wenn wir uns nicht persönlich sehen.</p>
-                    </div>
-
-                    <div class="karte">
-                        <h3>Ernährungsberatung</h3>
-                        <p>Keine Verbote, keine komplizierten Rechnereien. Wir finden Dinge, die in dein Leben passen – und die du auch nächsten Monat noch machst.</p>
-                    </div>
+                <div class="stat">
+                    <div class="statbar__num">120+</div>
+                    <div class="statbar__label">betreute Menschen, viele als Einsteiger</div>
                 </div>
-
-                <p class="section-cta"><a href="#buchung" class="cta">Termin buchen</a></p>
-            </section>
-
-            <section id="testimonials">
-                <h2>Was andere sagen</h2>
-                <!-- Prototyp: Testimonials frei erfunden. In echten Projekten 3 handverlesene Stimmen, am besten mit Foto. -->
-                <div id="testimonial-karten">
-                    <figure class="testimonial">
-                        <blockquote>
-                            <p>Ich hatte seit dem Studium keinen Sport mehr gemacht und ehrlich gesagt Respekt vorm Fitnessstudio. Max hat null Aufhebens darum gemacht. Nach vier Monaten gehe ich zum ersten Mal freiwillig trainieren – das hätte ich vorher nicht geglaubt.</p>
-                        </blockquote>
-                        <figcaption>Katharina, 38 · Projektmanagerin</figcaption>
-                    </figure>
-
-                    <figure class="testimonial">
-                        <blockquote>
-                            <p>Mein Rücken vom Bürojob war der eigentliche Grund. Wir haben klein angefangen, zweimal die Woche, nichts Verrücktes. Die Schmerzen sind fast weg und ich trage meine Kinder wieder ohne Fluchen die Treppe hoch.</p>
-                        </blockquote>
-                        <figcaption>Tobias, 41 · Ingenieur</figcaption>
-                    </figure>
-
-                    <figure class="testimonial">
-                        <blockquote>
-                            <p>Kein „in 12 Wochen zur Traumfigur"-Gerede. Max fragt, wie meine Woche war, bevor er den Plan anpasst. Genau das hat mir vorher gefehlt. Ich fühle mich zum ersten Mal seit Langem wieder wohl in meiner Haut.</p>
-                        </blockquote>
-                        <figcaption>Sarah, 32 · zurück zum Sport nach der Elternzeit</figcaption>
-                    </figure>
+                <div class="stat">
+                    <div class="statbar__num">Seit 2020</div>
+                    <div class="statbar__label">im eigenen Studio in Stuttgart-West</div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="buchung">
-                <h2>Termin buchen</h2>
-                <p>Wähle die Option, die gerade zu dir passt. Die ersten beiden sind kostenlos und unverbindlich.</p>
+        <!-- ÜBER MICH -->
+        <section class="section" id="ueber-mich" data-reveal>
+            <div class="container about-b">
+                <div class="about-b__body">
+                    <h2>Wer dich <span class="accent">trainiert</span></h2>
+                    <p>Ich bin Fabian, 38, und ich trainiere in Stuttgart Menschen auf jedem Level, vom kompletten Anfänger bis zum ambitionierten Sportler. Mein Schwerpunkt ist das Gym: <strong>Kraft und funktionelles Training</strong>, sauber aufgebaut und Schritt für Schritt gesteigert.</p>
+                    <p>Sportwissenschaft studiert, B-Lizenz, seit neun Jahren hauptberuflich Trainer. In der Zeit habe ich über 120 Menschen begleitet, viele davon komplette Einsteiger. Anfänger heißt bei mir trotzdem nicht anspruchslos: Wir arbeiten von der ersten Einheit an mit sauberer Technik und einem echten Plan, nur eben in deinem Tempo.</p>
+                </div>
+                <aside class="panel">
+                    <h3>Auf einen Blick</h3>
+                    <ul class="cred">
+                        <li><span class="k">Ausbildung</span><span class="v">Sportwissenschaft, M.A.</span></li>
+                        <li><span class="k">Lizenz</span><span class="v">Trainer B-Lizenz</span></li>
+                        <li><span class="k">Erfahrung</span><span class="v">9 Jahre hauptberuflich</span></li>
+                        <li><span class="k">Schwerpunkt</span><span class="v">Gym, Kraft &amp; funktionell</span></li>
+                        <li><span class="k">Standort</span><span class="v">Studio Stuttgart-West</span></li>
+                    </ul>
+                    <a class="btn btn--accent btn--block" href="#buchung" style="margin-top:1.4rem">Kennenlern-Termin buchen</a>
+                </aside>
+            </div>
+        </section>
 
-                <div id="buchungs-karten">
+        <!-- ANGEBOTE -->
+        <section class="section" id="angebote" data-reveal>
+            <div class="container">
+                <div class="section__head">
+                    <h2>So arbeiten wir <span class="accent">zusammen</span></h2>
+                    <p>Drei Wege, je nachdem wie viel Nähe und Flexibilität du brauchst.</p>
+                </div>
+                <div class="bento">
+                    <article class="tile tile--wide">
+                        <div class="tile__media">
+                            <picture>
+                                <source type="image/webp" srcset="images/coaching-800.webp">
+                                <img src="images/coaching-800.jpg" alt="1:1 Training im Studio" width="800" height="533" loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="tile__body">
+                            <h3>Einzeltraining</h3>
+                            <p>1:1 im Studio oder bei dir zu Hause. Ich korrigiere jede Bewegung, bis sie sitzt, und ziehe an, sobald es dir zu leicht wird. Der direkteste Weg zu sauberer Technik und sichtbaren Fortschritten.</p>
+                        </div>
+                    </article>
+                    <article class="tile">
+                        <div class="tile__media">
+                            <picture>
+                                <source type="image/webp" srcset="images/videocall-700.webp">
+                                <img src="images/videocall-700.jpg" alt="Online-Coaching per Video" width="700" height="467" loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="tile__body">
+                            <h3>Online-Coaching</h3>
+                            <p>Dein kompletter Trainingsplan auf dem Handy, dazu ein fester Video-Check-in pro Woche. Volle Flexibilität, mit jemandem, der deine Fortschritte im Blick behält.</p>
+                        </div>
+                    </article>
+                    <article class="tile">
+                        <div class="tile__media">
+                            <picture>
+                                <source type="image/webp" srcset="images/nutrition-700.webp">
+                                <img src="images/nutrition-700.jpg" alt="Ausgewogene Mahlzeiten aus der Ernährungsberatung" width="700" height="467" loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="tile__body">
+                            <h3>Ernährungsberatung</h3>
+                            <p>Keine Verbote, keine Kalorien-Erbsenzählerei. Wir bauen deine Ernährung so um, dass sie im Alltag hält.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-                    <div class="karte">
-                        <h3>Kostenloses Probetraining</h3>
-                        <p>60 Minuten, wir trainieren einmal zusammen. Du merkst direkt, ob es zwischen uns passt – ganz ohne Verpflichtung.</p>
-                        <button class="cta"
-                            data-cal-link="pt-demo-mcr/probetraining"
-                            data-cal-namespace="probetraining"
-                            data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
-                            Termin buchen
-                        </button>
+        <!-- BUCHUNG -->
+        <section class="section" id="buchung" data-reveal>
+            <div class="container">
+                <div class="section__head">
+                    <h2>Termin <span class="accent">buchen</span></h2>
+                    <p>Die ersten beiden Optionen sind kostenlos und unverbindlich. Du gehst kein Risiko ein.</p>
+                </div>
+                <div class="book-grid">
+                    <div class="book-card book-card--feat">
+                        <span class="book-badge">Kostenlos</span>
+                        <h3>Probetraining</h3>
+                        <div class="book-dur">60 Minuten</div>
+                        <p>Wir trainieren einmal zusammen. Du merkst direkt, ob es zwischen uns passt.</p>
+                        <button data-cal-link="pt-demo-mcr/probetraining" data-cal-namespace="probetraining" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>Termin buchen</button>
                     </div>
-
-                    <div class="karte">
-                        <h3>Kostenloses Kennenlern-Gespräch</h3>
-                        <p>30 Minuten am Telefon oder per Video. Du erzählst mir dein Ziel, ich sage dir ehrlich, ob und wie ich dir helfen kann.</p>
-                        <button class="cta"
-                            data-cal-link="pt-demo-mcr/probecall"
-                            data-cal-namespace="probecall"
-                            data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
-                            Termin buchen
-                        </button>
+                    <div class="book-card">
+                        <span class="book-badge">Kostenlos</span>
+                        <h3>Kennenlern-Gespräch</h3>
+                        <div class="book-dur">30 Minuten</div>
+                        <p>Telefon oder Video. Du erzählst dein Ziel, ich sage dir ehrlich, wie der Weg dorthin aussieht.</p>
+                        <button data-cal-link="pt-demo-mcr/probecall" data-cal-namespace="probecall" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>Termin buchen</button>
                     </div>
-
-                    <div class="karte">
+                    <div class="book-card">
                         <h3>1:1 Trainingseinheit</h3>
-                        <p>Eine gemeinsame Einheit vor Ort – für bestehende Kunden, die eine einzelne Session dazubuchen möchten.</p>
-                        <button class="cta"
-                            data-cal-link="pt-demo-mcr/trainingseinheit"
-                            data-cal-namespace="trainingseinheit"
-                            data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
-                            Termin buchen
-                        </button>
+                        <div class="book-dur">60 Minuten</div>
+                        <p>Eine einzelne Einheit vor Ort für bestehende Kunden.</p>
+                        <button data-cal-link="pt-demo-mcr/trainingseinheit" data-cal-namespace="trainingseinheit" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>Termin buchen</button>
                     </div>
-
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="faq">
-                <h2>Häufige Fragen</h2>
+        <!-- TESTIMONIALS -->
+        <section class="section testimonials-b" id="testimonials" data-reveal>
+            <div class="container">
+                <div class="section__head">
+                    <h2>Was andere <span class="accent">sagen</span></h2>
+                    <p class="rating-line"><span class="stars">★★★★★</span> 4,9 von 5 aus 37 Google-Bewertungen</p>
+                </div>
+                <div class="tgrid">
+                    <figure class="tcard">
+                        <blockquote>Ich hatte seit dem Studium keinen Sport gemacht und Respekt vorm Studio. Fabian hat mir jede Übung gezeigt, bis ich mich sicher gefühlt habe. Heute gehe ich freiwillig trainieren.</blockquote>
+                        <figcaption class="tcard__who">
+                            <picture>
+                                <source type="image/webp" srcset="images/testimonial-katharina-400.webp">
+                                <img src="images/testimonial-katharina-400.jpg" alt="Katharina" width="54" height="54" loading="lazy">
+                            </picture>
+                            <span><b>Katharina, 38</b><span>Projektmanagerin</span></span>
+                        </figcaption>
+                    </figure>
+                    <figure class="tcard">
+                        <blockquote>Mein Rücken vom Bürojob war der Grund. Nach einem halben Jahr sind die Schmerzen fast weg und ich trage meine Kinder wieder ohne Fluchen die Treppe hoch.</blockquote>
+                        <figcaption class="tcard__who">
+                            <picture>
+                                <source type="image/webp" srcset="images/testimonial-tobias-400.webp">
+                                <img src="images/testimonial-tobias-400.jpg" alt="Tobias" width="54" height="54" loading="lazy">
+                            </picture>
+                            <span><b>Tobias, 41</b><span>Ingenieur</span></span>
+                        </figcaption>
+                    </figure>
+                    <figure class="tcard">
+                        <blockquote>Kein Gerede von der Traumfigur in zwölf Wochen. Fabian fragt, wie meine Woche war, bevor er den Plan anpasst. Ich bin heute stärker als vor der Schwangerschaft.</blockquote>
+                        <figcaption class="tcard__who">
+                            <picture>
+                                <source type="image/webp" srcset="images/testimonial-sarah-400.webp">
+                                <img src="images/testimonial-sarah-400.jpg" alt="Sarah" width="54" height="54" loading="lazy">
+                            </picture>
+                            <span><b>Sarah, 32</b><span>zurück nach der Elternzeit</span></span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section" id="faq" data-reveal>
+            <div class="container">
+                <div class="section__head">
+                    <h2>Häufige <span class="accent">Fragen</span></h2>
+                </div>
                 <div class="faq">
                     <details>
-                        <summary>Was kostet das Ganze?</summary>
-                        <p>Ein Monat Coaching liegt meistens zwischen 200 und 500 Euro – je nachdem, wie oft wir trainieren und ob Ernährung dazukommt. Was für dich Sinn ergibt, klären wir vorher in Ruhe, bevor du dich festlegst.</p>
+                        <summary>Was kostet ein Probetraining?</summary>
+                        <p>Das Probetraining ist kostenlos und dauert 60 Minuten. Wir trainieren einmal zusammen, danach entscheidest du in Ruhe, ob du weitermachen willst.</p>
                     </details>
                     <details>
-                        <summary>Ich bin ziemlich untrainiert. Bin ich hier falsch?</summary>
-                        <p>Im Gegenteil – mit genau solchen Leuten arbeite ich am liebsten. Es gibt keine Voraussetzung außer der, dass du anfangen willst. Wir starten in deinem Tempo.</p>
+                        <summary>Bin ich fit genug für Personal Training?</summary>
+                        <p>Ja. Du brauchst keine Vorerfahrung und keine Grundfitness. Ein großer Teil meiner Kunden hat bei null angefangen. Wir starten mit den Basics und steigern in deinem Tempo.</p>
                     </details>
                     <details>
-                        <summary>Welche Sportarten passen zu deinem Coaching?</summary>
-                        <p>Gym und funktionelles Training sind die Basis. Wenn du daneben Fußball, Laufen, Radfahren, Schwimmen oder Volleyball machst, bauen wir das mit ein.</p>
+                        <summary>Wo trainieren wir?</summary>
+                        <p>Wir trainieren in meinem Studio in Stuttgart-West oder bei dir zu Hause. Online-Coaching geht von überall.</p>
+                    </details>
+                    <details>
+                        <summary>Wie oft sollte ich pro Woche trainieren?</summary>
+                        <p>Für den Anfang reichen 2 Einheiten pro Woche. Die meisten meiner Kunden trainieren 2 bis 3 Mal, den Plan passe ich an deinen Alltag an.</p>
+                    </details>
+                    <details>
+                        <summary>Was ist der Unterschied zu einem normalen Gym?</summary>
+                        <p>Im Gym trainierst du allein. Beim Personal Training bekommst du einen Plan, Technik-Korrektur und jemanden, der dranbleibt. Du machst weniger Fehler und kommst schneller voran.</p>
+                    </details>
+                    <details>
+                        <summary>Was kostet das Coaching?</summary>
+                        <p>Ein Monat Coaching liegt meist zwischen 200 und 500 Euro, je nach Frequenz und ob Ernährung dazukommt. Was für dich passt, klären wir vorher offen.</p>
                     </details>
                     <details>
                         <summary>Muss ich mich langfristig binden?</summary>
-                        <p>Nein. Wir fangen mit einem kostenlosen Kennenlernen an. Wie es weitergeht, entscheidest du danach – keinen Knebelvertrag, kein Kleingedrucktes.</p>
-                    </details>
-                    <details>
-                        <summary>Wo findet das Training statt?</summary>
-                        <p>In einem kleinen Studio in Stuttgart-West oder bei dir zu Hause. Online-Coaching geht von überall aus.</p>
+                        <p>Nein. Wir starten mit einem kostenlosen Kennenlernen, danach entscheidest du. Keine Mindestlaufzeit, kein Kleingedrucktes.</p>
                     </details>
                 </div>
-                <p class="section-cta">Noch etwas unklar? <a href="#chat">Frag Maxi im Chat.</a></p>
-            </section>
+            </div>
+        </section>
 
-            <section id="rezensionen">
-                <h2>Google-Bewertungen</h2>
-                <!-- Prototyp: später echte Google-Rezensionen einbinden. Jetzt nur als Andeutung. -->
-                <div class="rating" role="img" aria-label="4,9 von 5 Sternen aus 37 Google-Rezensionen">
-                    <span class="stars" aria-hidden="true">★★★★★</span>
-                    <span class="score" aria-hidden="true">4,9 von 5</span>
-                    <span class="count" aria-hidden="true">· 37 Rezensionen</span>
-                </div>
-                <p>Die Bewertungen stammen von Kundinnen und Kunden aus Stuttgart und Umgebung.</p>
-            </section>
-
-            <section id="chat">
-                <h2>Schnelle Frage? Frag Maxi</h2>
-                <p>Maxi ist mein digitaler Assistent und beantwortet die häufigsten Fragen sofort – rund um die Uhr.</p>
-                <div id="chatwidget">
-                    <div id="chatverlauf" role="log" aria-live="polite" aria-label="Chatverlauf mit Maxi">
-                        <div class="bot">Hi, ich bin Maxi! Ich beantworte alle Fragen rund ums Coaching von Max. Was kann ich für dich tun?</div>
-                        <div id="quick-replies">
-                            <button onclick="quickReply('Was kostet das Coaching?')" class="qrb">Preise</button>
-                            <button onclick="quickReply('Ich möchte einen Termin buchen')" class="qrb">Termin</button>
-                            <button onclick="quickReply('Was sind deine Angebote?')" class="qrb">Angebote</button>
-                        </div>
-                    </div>
-                    <div id="messagefield">
-                        <label for="chatcontent" class="visually-hidden">Deine Nachricht an Maxi</label>
-                        <input type="text" id="chatcontent" placeholder="Gib hier deine Nachricht ein">
-                        <button id="chatbutton" type="button">Senden</button>
+        <!-- CTA BAND -->
+        <section class="section" data-reveal>
+            <div class="container">
+                <div class="cta-band-b">
+                    <h2>Bereit für die <span class="accent">erste Einheit?</span></h2>
+                    <p>Buch dir ein kostenloses Probetraining oder frag Fabi, wenn du noch unsicher bist.</p>
+                    <div class="cta-band-b__cta">
+                        <a class="btn btn--accent btn--lg" href="#buchung">Termin buchen</a>
+                        <button class="btn btn--glass btn--lg" type="button" data-open-contact>Nachricht schreiben</button>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
+    </main>
 
-            <section id="kontakt">
-                <h2>Kontakt</h2>
-                <p>Lieber direkt schreiben? Kein Problem.</p>
-                <address>
-                    Schreib mir an <a href="mailto:max@beispiel.de">max@beispiel.de</a> – oder nutz das Formular.
-                </address>
-                <div id="kontaktformularabschnitt">
-                    <form action="" method="post" id="contactform">
-                        <div>
-                            <label for="name">Dein Name</label>
-                            <input type="text" name="name" id="name" required>
-                        </div>
-                        <div>
-                            <label for="email">Deine E-Mail</label>
-                            <input type="email" name="email" id="email" required>
-                        </div>
-                        <div>
-                            <label for="message">Deine Nachricht / Wünsche</label>
-                            <textarea name="message" id="message" rows="5" required></textarea>
-                        </div>
-                        <div>
-                            <button type="submit">Nachricht schreiben</button>
-                        </div>
-                    </form>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a class="brand" href="#top" aria-label="Fabian Kern">
+                        <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#ffffff"/><g fill="none" stroke="#e1552b" stroke-width="2.6" stroke-linecap="round"><path d="M8 16h16"/></g><g fill="#e1552b"><rect x="4.5" y="10.5" width="3.4" height="11" rx="1.5"/><rect x="24.1" y="10.5" width="3.4" height="11" rx="1.5"/><rect x="8.4" y="12.5" width="2.6" height="7" rx="1.2"/><rect x="21" y="12.5" width="2.6" height="7" rx="1.2"/></g></svg>
+                        Fabian Kern
+                    </a>
+                    <p>Personal Training in Stuttgart-West. Kraft und funktionelles Training für alle Level.</p>
                 </div>
+                <div class="footer__links">
+                    <div class="footer__col">
+                        <h3>Seite</h3>
+                        <a href="#ueber-mich">Über mich</a>
+                        <a href="#angebote">Angebote</a>
+                        <a href="#buchung">Termine</a>
+                        <a href="#faq">FAQ</a>
+                    </div>
+                    <div class="footer__col">
+                        <h3>Kontakt</h3>
+                        <address>
+                            <a href="mailto:fabian@beispiel.de">fabian@beispiel.de</a>
+                        </address>
+                        <a href="#" data-open-contact role="button">Nachricht schreiben</a>
+                        <a href="#buchung">Termin buchen</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <span>© <span id="year">2026</span> Fabian Kern, Personal Trainer in Stuttgart</span>
+                <span>Impressum und Datenschutz folgen.</span>
+            </div>
+        </div>
+    </footer>
 
-                <p class="hidden" id="thanks"></p>
-            </section>
+    <!-- Floating Chat-Button -->
+    <button id="chat-fab" type="button" data-open-chat aria-label="Chat mit Fabi öffnen">
+        <span class="fab__label">Frag Fabi</span>
+        <img class="fab__avatar" src="images/fabi-normal-256.webp" alt="" width="62" height="62">
+    </button>
 
-        </main>
+    <!-- Chat-Modal -->
+    <div class="modal modal--chat" id="chat-modal" role="dialog" aria-modal="true" aria-labelledby="chat-title" aria-hidden="true">
+        <div class="modal__backdrop" data-close-modal></div>
+        <div class="modal__dialog">
+            <button class="modal__close" type="button" data-close-modal aria-label="Chat schließen">&times;</button>
+            <div class="chat">
+                <div class="chat__head">
+                    <img class="chat__avatar" src="images/fabi-normal-256.webp" alt="" width="42" height="42" aria-hidden="true">
+                    <div class="chat__id">
+                        <span class="chat__name" id="chat-title">Fabi</span>
+                        <span class="chat__status">Fabians digitaler Assistent</span>
+                    </div>
+                </div>
+                <div id="chatverlauf" role="log" aria-live="polite" aria-label="Chatverlauf mit Fabi">
+                    <div class="msg msg--bot">
+                        <img class="msg__avatar" src="images/fabi-normal-128.webp" alt="" width="30" height="30" aria-hidden="true">
+                        <div class="msg__bubble">Hi, ich bin Fabi! Ich beantworte alle Fragen rund ums Coaching von Fabian. Was kann ich für dich tun?</div>
+                    </div>
+                    <div id="quick-replies">
+                        <button class="qr" type="button" data-quick="Was kostet das Coaching?">Preise</button>
+                        <button class="qr" type="button" data-quick="Ich möchte einen Termin buchen">Termin</button>
+                        <button class="qr" type="button" data-quick="Was sind deine Angebote?">Angebote</button>
+                    </div>
+                </div>
+                <div class="chat__foot">
+                    <label for="chatcontent" class="visually-hidden">Deine Nachricht an Fabi</label>
+                    <input type="text" id="chatcontent" placeholder="Gib hier deine Nachricht ein">
+                    <button id="chatbutton" type="button">Senden</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <footer>
-            <p>© 2026 Max Müller · Personal Trainer in Stuttgart</p>
-        </footer>
+    <!-- Kontakt-Modal -->
+    <div class="modal modal--sheet" id="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-title" aria-hidden="true">
+        <div class="modal__backdrop" data-close-modal></div>
+        <div class="modal__dialog">
+            <button class="modal__close" type="button" data-close-modal aria-label="Schließen">&times;</button>
+            <h2 class="sheet__title" id="contact-title">Nachricht schreiben</h2>
+            <p class="sheet__lead">Erzähl mir kurz, worum es geht. Ich melde mich meist noch am selben Tag zurück.</p>
+            <form class="form" id="contactform" action="" method="post">
+                <div class="field">
+                    <label for="cf-name">Dein Name</label>
+                    <input id="cf-name" name="name" type="text" autocomplete="name" required data-autofocus>
+                </div>
+                <div class="field">
+                    <label for="cf-email">Deine E-Mail</label>
+                    <input id="cf-email" name="email" type="email" autocomplete="email" required>
+                </div>
+                <div class="field">
+                    <label for="cf-phone">Telefon <span class="muted">(optional)</span></label>
+                    <input id="cf-phone" name="phone" type="tel" autocomplete="tel">
+                </div>
+                <div class="field">
+                    <label for="cf-msg">Deine Nachricht</label>
+                    <textarea id="cf-msg" name="message" required></textarea>
+                </div>
+                <button class="btn btn--accent btn--block" type="submit">Nachricht senden</button>
+                <p class="form__hint">Kein Spam. Deine Angaben nutze ich nur, um dir zu antworten.</p>
+            </form>
+            <p class="form__thanks" id="contact-thanks" hidden></p>
+        </div>
+    </div>
 
     <script src="config.js"></script>
-    <script>
-        let quickreplyval = true
-
-        function startChat(event){
-            if (event) event.preventDefault()
-            document.getElementById("chat").scrollIntoView({ behavior: "smooth" })
-            document.getElementById("chatcontent").focus({ preventScroll: true })
-        }
-
-        async function submitFormula(event){
-            event.preventDefault();
-            try {
-                const formData = new FormData(document.getElementById('contactform'));
-                const r = await fetch(`https://formspree.io/f/${CONFIG.formspreeId}`, {
-                    method: "POST",
-                    body: formData,
-                    headers: { Accept: "application/json" }
-                });
-                if (!r.ok) throw new Error("Status " + r.status);
-                document.getElementById("kontaktformularabschnitt").classList.add("hidden")
-                document.getElementById("thanks").textContent = "Danke! Ich melde mich so bald wie möglich."
-                document.getElementById("thanks").classList.remove("hidden")
-            } catch (error) {
-                document.getElementById("thanks").textContent = "Das hat nicht geklappt. Versuche es erneut."
-                document.getElementById("thanks").classList.remove("hidden")
-            }
-        }
-
-        function addMessage(sender, text){
-            const newDiv = document.createElement('div');
-
-            let messagereplaced = false
-
-            if (text.includes("KONTAKT_FORMULAR")) {
-                text = text.replace("KONTAKT_FORMULAR",
-                    '<button onclick="document.getElementById(\'kontakt\').scrollIntoView()">Kontaktformular</button>'
-                );
-                messagereplaced = true
-            }
-
-            if (text.includes("TERMINBUCHUNG")) {
-                text = text.replace("TERMINBUCHUNG",
-                    '<button onclick="document.getElementById(\'buchung\').scrollIntoView()">Terminbuchung</button>'
-                );
-                messagereplaced = true
-            }
-
-
-            if (messagereplaced) {
-                newDiv.innerHTML = text
-            }
-            else {
-                newDiv.textContent = text
-            }
-
-
-            newDiv.classList.add(sender)
-            document.getElementById("chatverlauf").appendChild(newDiv)
-        }
-
-        let messages = [
-            {'role': 'system', 'content': CONFIG.systemPrompt},
-            {'role': 'assistant','content': 'Hi, ich bin Maxi! Ich beantworte alle Fragen rund ums Coaching von Max. Was kann ich für dich tun?'}
-        ]
-
-        async function sendMessage(){
-            const chatverlauf = document.getElementById("chatverlauf")
-
-            if (document.getElementById("chatcontent").value.trim() != "") {
-                const userMessage = document.getElementById("chatcontent").value
-                document.getElementById("chatcontent").value = ""
-
-                if (quickreplyval == true){
-                    document.getElementById("quick-replies").remove()
-                    quickreplyval = false
-                }
-
-                addMessage("user", userMessage)
-
-                const newusermessage = {'role': 'user','content': userMessage}
-                messages.push(newusermessage)
-
-                try {
-                    const newDiv = document.createElement('div');
-                    newDiv.textContent = "Denkt nach..."
-                    newDiv.classList.add("bot")
-                    document.getElementById("chatverlauf").appendChild(newDiv)
-                    chatverlauf.scrollTop = chatverlauf.scrollHeight
-
-                    const r = await fetch('/.netlify/functions/chat', {
-                        method: 'POST',
-                        body: JSON.stringify({ messages })
-                    })
-
-                    if (!r.ok) throw new Error("Status " + r.status)
-                    const data = await r.json()
-
-                    const botMessage = data.choices[0].message.content
-
-
-                    newDiv.remove()
-                    addMessage("bot", botMessage)
-
-                    const newbotmessage = {'role': 'assistant', 'content': botMessage}
-                    messages.push(newbotmessage)
-                } catch (error) {
-                    const botMessage = "Ein Fehler ist aufgetreten. Versuche es nochmal."
-                    newDiv.remove()
-                    addMessage("bot", botMessage)
-                }
-
-                chatverlauf.scrollTop = chatverlauf.scrollHeight
-            }
-        }
-
-        async function quickReply(message){
-            document.getElementById("quick-replies").remove()
-            quickreplyval = false
-            document.getElementById("chatcontent").value = message
-            await sendMessage()
-        }
-
-        contactform.addEventListener("submit", submitFormula)
-        chatbutton.addEventListener("click", sendMessage)
-
-        const chatinput = document.getElementById('chatcontent')
-
-        chatinput.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter') {
-            event.preventDefault()
-            sendMessage()
-        }
-        })
-    </script>
-
-    </body>
+    <script src="app.js"></script>
+</body>
 </html>
