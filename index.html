@@ -27,6 +27,16 @@
     <meta name="twitter:image" content="https://pt-demo-mcr.netlify.app/images/og-image.jpg">
 
     <meta name="theme-color" content="#161318">
+
+    <!-- Externe Origins fruehzeitig verbinden (Handshake vor dem eigentlichen Request) -->
+    <link rel="preconnect" href="https://app.cal.com" crossorigin>
+    <link rel="dns-prefetch" href="https://app.cal.com">
+    <link rel="preconnect" href="https://formspree.io" crossorigin>
+    <link rel="dns-prefetch" href="https://formspree.io">
+
+    <!-- Primaerer Font-Fall vorziehen (LCP: Hero-H1 nutzt diese Datei) -->
+    <link rel="preload" as="font" type="font/woff2" href="fonts/zalando-sans-latin.woff2" crossorigin>
+
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -36,18 +46,6 @@
     <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="components.css">
     <link rel="stylesheet" href="style.css">
-
-    <script type="text/javascript">
-        (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-        Cal("init", "probetraining", {origin:"https://app.cal.com"});
-        Cal("init", "probecall", {origin:"https://app.cal.com"});
-        Cal("init", "trainingseinheit", {origin:"https://app.cal.com"});
-        Cal.config = Cal.config || {};
-        Cal.config.forwardQueryParams = true;
-        Cal.ns.probetraining("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-        Cal.ns.probecall("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-        Cal.ns.trainingseinheit("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-    </script>
 
     <script type="application/ld+json">
     {
@@ -448,7 +446,7 @@
             <button class="modal__close" type="button" data-close-modal aria-label="Chat schließen">&times;</button>
             <div class="chat">
                 <div class="chat__head">
-                    <img class="chat__avatar" src="images/fabi-normal-256.webp" alt="" width="42" height="42" aria-hidden="true">
+                    <img class="chat__avatar" src="images/fabi-normal-256.webp" alt="" width="42" height="42" loading="lazy" aria-hidden="true">
                     <div class="chat__id">
                         <span class="chat__name" id="chat-title">Fabi</span>
                         <span class="chat__status">Fabians digitaler Assistent</span>
@@ -456,7 +454,7 @@
                 </div>
                 <div id="chatverlauf" role="log" aria-live="polite" aria-label="Chatverlauf mit Fabi">
                     <div class="msg msg--bot">
-                        <img class="msg__avatar" src="images/fabi-normal-128.webp" alt="" width="30" height="30" aria-hidden="true">
+                        <img class="msg__avatar" src="images/fabi-normal-128.webp" alt="" width="30" height="30" loading="lazy" aria-hidden="true">
                         <div class="msg__bubble">Hi, ich bin Fabi! Ich beantworte alle Fragen rund ums Coaching von Fabian. Was kann ich für dich tun?</div>
                     </div>
                     <div id="quick-replies">
@@ -505,7 +503,20 @@
         </div>
     </div>
 
-    <script src="config.js"></script>
-    <script src="app.js"></script>
+    <script src="config.js" defer></script>
+    <script src="app.js" defer></script>
+
+    <!-- Cal.com-Embed: laedt embed.js dynamisch. Bewusst am Body-Ende, damit der Loader das Rendering nicht blockiert. -->
+    <script>
+        (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+        Cal("init", "probetraining", {origin:"https://app.cal.com"});
+        Cal("init", "probecall", {origin:"https://app.cal.com"});
+        Cal("init", "trainingseinheit", {origin:"https://app.cal.com"});
+        Cal.config = Cal.config || {};
+        Cal.config.forwardQueryParams = true;
+        Cal.ns.probetraining("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+        Cal.ns.probecall("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+        Cal.ns.trainingseinheit("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+    </script>
 </body>
 </html>
