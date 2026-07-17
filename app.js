@@ -129,11 +129,11 @@
   function addMessage(sender, text) {
     var replaced = false;
     if (text.indexOf('KONTAKT_FORMULAR') !== -1) {
-      text = text.replace('KONTAKT_FORMULAR', '<button type="button" class="chip" data-open-contact>Kontaktformular oeffnen</button>');
+      text = text.replace('KONTAKT_FORMULAR', '<button type="button" class="chip" data-open-contact>Kontaktformular</button>');
       replaced = true;
     }
     if (text.indexOf('TERMINBUCHUNG') !== -1) {
-      text = text.replace('TERMINBUCHUNG', '<button type="button" class="chip" data-goto="buchung">Zur Terminbuchung</button>');
+      text = text.replace('TERMINBUCHUNG', '<button type="button" class="chip" data-goto="buchung">Terminbuchung</button>');
       replaced = true;
     }
     var row = sender === 'bot' ? makeBotRow(text, replaced) : makeUserRow(text);
