@@ -64,6 +64,29 @@
     scrollChat();
   }
 
+  /* ---------------- Nav-Panel (Mobile-Hamburger) ---------------- */
+  var navLastTrigger = null;
+  function navPanel() { return document.getElementById('nav-panel'); }
+  function navToggle() { return document.querySelector('.nav__toggle'); }
+  function openNav(trigger) {
+    var p = navPanel(); if (!p) return;
+    navLastTrigger = trigger || document.activeElement;
+    p.classList.add('is-open');
+    p.setAttribute('aria-hidden', 'false');
+    var tg = navToggle(); if (tg) tg.setAttribute('aria-expanded', 'true');
+    document.documentElement.classList.add('modal-open');
+    var first = p.querySelector(FOCUSABLE);
+    if (first) setTimeout(function () { first.focus(); }, 60);
+  }
+  function closeNav() {
+    var p = navPanel(); if (!p || !p.classList.contains('is-open')) return;
+    p.classList.remove('is-open');
+    p.setAttribute('aria-hidden', 'true');
+    var tg = navToggle(); if (tg) tg.setAttribute('aria-expanded', 'false');
+    if (!document.querySelector('.modal.is-open')) document.documentElement.classList.remove('modal-open');
+    if (navLastTrigger && typeof navLastTrigger.focus === 'function') navLastTrigger.focus();
+  }
+
   /* ---------------- Event-Delegation ---------------- */
   document.addEventListener('click', function (e) {
     var t = e.target;
@@ -72,6 +95,8 @@
     var closeEl = t.closest('[data-close-modal]');
     var gotoEl = t.closest('[data-goto]');
     var qr = t.closest('[data-quick]');
+    var navToggleEl = t.closest('.nav__toggle');
+    var navCloseEl = t.closest('[data-close-nav]');
 
     if (openChatEl) { e.preventDefault(); openChat(openChatEl); }
     else if (openContactEl) { e.preventDefault(); openModal(document.getElementById('contact-modal'), openContactEl); }
@@ -83,14 +108,25 @@
       if (target) setTimeout(function () { target.scrollIntoView({ behavior: 'smooth' }); }, 120);
     }
     else if (qr) { e.preventDefault(); quickReply(qr.getAttribute('data-quick')); }
+    else if (navToggleEl) { e.preventDefault(); (navPanel() && navPanel().classList.contains('is-open')) ? closeNav() : openNav(navToggleEl); }
+    else if (navCloseEl) {
+      // Anker-Links im Panel: erst Panel zu, dann Standardverhalten (Hash-Scroll)
+      closeNav();
+    }
     else if (t.classList && t.classList.contains('modal__backdrop')) { closeModal(t.closest('.modal')); }
   });
 
   document.addEventListener('keydown', function (e) {
-    var open = document.querySelector('.modal.is-open');
-    if (!open) return;
-    if (e.key === 'Escape') { closeModal(open); return; }
-    trapTab(e, open);
+    var openNavEl = document.querySelector('.nav-panel.is-open');
+    var openModalEl = document.querySelector('.modal.is-open');
+    if (openNavEl) {
+      if (e.key === 'Escape') { closeNav(); return; }
+      trapTab(e, openNavEl);
+      return;
+    }
+    if (!openModalEl) return;
+    if (e.key === 'Escape') { closeModal(openModalEl); return; }
+    trapTab(e, openModalEl);
   });
 
   /* ---------------- Chat (Fetch unveraendert) ---------------- */

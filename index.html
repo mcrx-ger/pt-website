@@ -155,9 +155,28 @@
             </nav>
             <div class="nav__right">
                 <a class="btn btn--accent" href="#buchung">Termin buchen</a>
+                <button class="nav__toggle" type="button" aria-controls="nav-panel" aria-expanded="false" aria-label="Menü öffnen">
+                    <span class="nav__toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+                </button>
             </div>
         </div>
     </header>
+
+    <!-- Mobile-Nav-Panel (unter 900px). Slide-in von rechts, Tastatur-bedienbar. -->
+    <div class="nav-panel" id="nav-panel" aria-hidden="true">
+        <div class="nav-panel__backdrop" data-close-nav></div>
+        <aside class="nav-panel__dialog" aria-label="Mobile Navigation">
+            <button class="nav-panel__close" type="button" data-close-nav aria-label="Menü schließen">&times;</button>
+            <nav class="nav-panel__links" aria-label="Hauptnavigation mobil">
+                <a href="#ueber-mich" data-close-nav>Über mich</a>
+                <a href="#angebote" data-close-nav>Angebote</a>
+                <a href="#buchung" data-close-nav>Termine</a>
+                <a href="#testimonials" data-close-nav>Bewertungen</a>
+                <a href="#faq" data-close-nav>FAQ</a>
+            </nav>
+            <a class="btn btn--accent btn--block" href="#buchung" data-close-nav>Termin buchen</a>
+        </aside>
+    </div>
 
     <main id="inhalt">
         <span id="top"></span>
