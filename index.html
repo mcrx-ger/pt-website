@@ -227,7 +227,7 @@
                     <p>Ich bin Fabian, 38, und ich trainiere in Stuttgart Menschen auf jedem Level, vom kompletten Anfänger bis zum ambitionierten Sportler. Mein Schwerpunkt ist das Gym: <strong>Kraft und funktionelles Training</strong>, sauber aufgebaut und Schritt für Schritt gesteigert.</p>
                     <p>Sportwissenschaft studiert, B-Lizenz, seit neun Jahren hauptberuflich Trainer. In der Zeit habe ich über 120 Menschen begleitet, viele davon komplette Einsteiger. Anfänger heißt bei mir trotzdem nicht anspruchslos: Wir arbeiten von der ersten Einheit an mit sauberer Technik und einem echten Plan, nur eben in deinem Tempo.</p>
                 </div>
-                <aside class="panel">
+                <div class="panel">
                     <h3>Auf einen Blick</h3>
                     <ul class="cred">
                         <li><span class="k">Ausbildung</span><span class="v">Sportwissenschaft, M.A.</span></li>
@@ -237,7 +237,7 @@
                         <li><span class="k">Standort</span><span class="v">Studio Stuttgart-West</span></li>
                     </ul>
                     <a class="btn btn--accent btn--block" href="#buchung" style="margin-top:1.4rem">Kennenlern-Termin buchen</a>
-                </aside>
+                </div>
             </div>
         </section>
 
@@ -334,7 +334,7 @@
                         <figcaption class="tcard__who">
                             <picture>
                                 <source type="image/webp" srcset="images/testimonial-katharina-400.webp">
-                                <img src="images/testimonial-katharina-400.jpg" alt="Katharina" width="54" height="54" loading="lazy">
+                                <img src="images/testimonial-katharina-400.jpg" alt="" width="54" height="54" loading="lazy">
                             </picture>
                             <span><b>Katharina, 38</b><span>Projektmanagerin</span></span>
                         </figcaption>
@@ -344,7 +344,7 @@
                         <figcaption class="tcard__who">
                             <picture>
                                 <source type="image/webp" srcset="images/testimonial-tobias-400.webp">
-                                <img src="images/testimonial-tobias-400.jpg" alt="Tobias" width="54" height="54" loading="lazy">
+                                <img src="images/testimonial-tobias-400.jpg" alt="" width="54" height="54" loading="lazy">
                             </picture>
                             <span><b>Tobias, 41</b><span>Ingenieur</span></span>
                         </figcaption>
@@ -354,7 +354,7 @@
                         <figcaption class="tcard__who">
                             <picture>
                                 <source type="image/webp" srcset="images/testimonial-sarah-400.webp">
-                                <img src="images/testimonial-sarah-400.jpg" alt="Sarah" width="54" height="54" loading="lazy">
+                                <img src="images/testimonial-sarah-400.jpg" alt="" width="54" height="54" loading="lazy">
                             </picture>
                             <span><b>Sarah, 32</b><span>zurück nach der Elternzeit</span></span>
                         </figcaption>
@@ -440,7 +440,7 @@
                         <address>
                             <a href="mailto:fabian@beispiel.de">fabian@beispiel.de</a>
                         </address>
-                        <a href="#" data-open-contact role="button">Nachricht schreiben</a>
+                        <button type="button" class="footer__linkbtn" data-open-contact>Nachricht schreiben</button>
                         <a href="#buchung">Termin buchen</a>
                     </div>
                 </div>
@@ -453,7 +453,7 @@
     </footer>
 
     <!-- Floating Chat-Button -->
-    <button id="chat-fab" type="button" data-open-chat aria-label="Chat mit Fabi öffnen">
+    <button id="chat-fab" type="button" data-open-chat aria-label="Frag Fabi öffnen">
         <span class="fab__label">Frag Fabi</span>
         <img class="fab__avatar" src="images/fabi-normal-256.webp" alt="" width="62" height="62">
     </button>
@@ -462,7 +462,7 @@
     <div class="modal modal--chat" id="chat-modal" role="dialog" aria-modal="true" aria-labelledby="chat-title" aria-hidden="true">
         <div class="modal__backdrop" data-close-modal></div>
         <div class="modal__dialog">
-            <button class="modal__close" type="button" data-close-modal aria-label="Chat schließen">&times;</button>
+            <button class="modal__close" type="button" data-close-modal aria-label="Chat schließen"><span aria-hidden="true">&times;</span></button>
             <div class="chat">
                 <div class="chat__head">
                     <img class="chat__avatar" src="images/fabi-normal-256.webp" alt="" width="42" height="42" loading="lazy" aria-hidden="true">
@@ -495,7 +495,7 @@
     <div class="modal modal--sheet" id="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-title" aria-hidden="true">
         <div class="modal__backdrop" data-close-modal></div>
         <div class="modal__dialog">
-            <button class="modal__close" type="button" data-close-modal aria-label="Schließen">&times;</button>
+            <button class="modal__close" type="button" data-close-modal aria-label="Kontaktformular schließen"><span aria-hidden="true">&times;</span></button>
             <h2 class="sheet__title" id="contact-title">Nachricht schreiben</h2>
             <p class="sheet__lead">Erzähl mir kurz, worum es geht. Ich melde mich meist noch am selben Tag zurück.</p>
             <form class="form" id="contactform" action="" method="post">
@@ -518,7 +518,7 @@
                 <button class="btn btn--accent btn--block" type="submit">Nachricht senden</button>
                 <p class="form__hint">Kein Spam. Deine Angaben nutze ich nur, um dir zu antworten.</p>
             </form>
-            <p class="form__thanks" id="contact-thanks" hidden></p>
+            <p class="form__thanks" id="contact-thanks" role="status" aria-live="polite" hidden></p>
         </div>
     </div>
 
