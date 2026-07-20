@@ -16,7 +16,7 @@
 (function () {
   'use strict';
 
-  var AV = { normal: 'images/fabi-normal-128.webp', thinking: 'images/fabi-thinking-128.webp' };
+  var AV = { normal: 'images/fabi-normal-128.webp', thinking: 'images/fabi-thinking-128.webp', flex: 'images/fabi-flex-128.webp' };
   var FOCUSABLE = 'a[href],button:not([disabled]),input:not([disabled]),textarea:not([disabled]),select:not([disabled]),[tabindex]:not([tabindex="-1"])';
   var lastTrigger = null;
 
@@ -140,11 +140,11 @@
   function chatlog() { return document.getElementById('chatverlauf'); }
   function scrollChat() { var c = chatlog(); if (c) c.scrollTop = c.scrollHeight; }
 
-  function makeBotRow(content, isHTML) {
+  function makeBotRow(content, isHTML, avatarSrc) {
     var row = document.createElement('div');
     row.className = 'msg msg--bot';
     var av = document.createElement('img');
-    av.className = 'msg__avatar'; av.src = AV.normal; av.alt = ''; av.width = 30; av.height = 30;
+    av.className = 'msg__avatar'; av.src = avatarSrc || AV.normal; av.alt = ''; av.width = 30; av.height = 30;
     av.setAttribute('aria-hidden', 'true');
     var bubble = document.createElement('div');
     bubble.className = 'msg__bubble';
@@ -164,15 +164,17 @@
 
   function addMessage(sender, text) {
     var replaced = false;
+    var wantsBooking = text.indexOf('TERMINBUCHUNG') !== -1;
     if (text.indexOf('KONTAKT_FORMULAR') !== -1) {
       text = text.replace('KONTAKT_FORMULAR', '<button type="button" class="chip" data-open-contact>Kontaktformular</button>');
       replaced = true;
     }
-    if (text.indexOf('TERMINBUCHUNG') !== -1) {
+    if (wantsBooking) {
       text = text.replace('TERMINBUCHUNG', '<button type="button" class="chip" data-goto="buchung">Terminbuchung</button>');
       replaced = true;
     }
-    var row = sender === 'bot' ? makeBotRow(text, replaced) : makeUserRow(text);
+    var avatarSrc = (sender === 'bot' && wantsBooking) ? AV.flex : AV.normal;
+    var row = sender === 'bot' ? makeBotRow(text, replaced, avatarSrc) : makeUserRow(text);
     chatlog().appendChild(row);
     scrollChat();
   }
